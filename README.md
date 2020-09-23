@@ -1,4 +1,4 @@
-# Team Name
+# Space Force Official
 
 Project description (~1 paragraph)
 
@@ -17,6 +17,10 @@ evenly while trying to favor each others strengths.
 ## Team Members and Roles
 
 * Max Foreback
+
+* Abbey Diller (Moral Support)
+* Evan Boardway
+
 
 ## Prerequisites
 
