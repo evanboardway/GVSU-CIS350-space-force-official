@@ -17,10 +17,9 @@ evenly while trying to favor each others strengths.
 ## Team Members and Roles
 
 * Max Foreback
-
 * Abbey Diller (Moral Support)
 * Evan Boardway
-
+* Wyatt Davis
 
 ## Prerequisites
 
