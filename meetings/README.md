@@ -4,23 +4,23 @@ Hold a team meeting at least once a week in some format.  Copy the following tem
 
 ## Meeting minutes template
 
-Team name:
+Team name: space force official 
 
-Members present:
+Members present:all	
 
-Date:
+Date:9/23/2020
 
-Time:
+Time:3:30
 
 Discussion points: 
 
-*
-*
-*
+*git
+*aha	
+*:D
 
 Goals for next week (include responsibilities)
 
-*
-*
-*
+*begin project
+*talk to prof about goals and stuff
+*things
 
