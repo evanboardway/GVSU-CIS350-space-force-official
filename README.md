@@ -20,6 +20,7 @@ evenly while trying to favor each others strengths.
 * Abbey Diller (Moral Support)
 * Evan Boardway
 * Wyatt Davis
+* Ryan(waterboy, spiritual guide)
 
 ## Prerequisites
 
