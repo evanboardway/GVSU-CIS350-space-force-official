@@ -6,7 +6,7 @@ Project description (~1 paragraph)
 
 * Abbey Diller (Moral Support)
 * Evan Boardway
-* 
+* Wyatt Davis
 
 ## Prerequisites
 
