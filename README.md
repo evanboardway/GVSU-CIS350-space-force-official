@@ -8,7 +8,7 @@ Our project plan is to create a rouguelike rpg set in an sci-fi environment revo
 ## Team Members and Roles
 
 * [Max Foreback](https://github.com/Max-Foreback/-CIS350-HW2-Foreback)
-* Abbey Diller (Moral Support)
+* [Abbey Diller](https://github.com/acdiller/CIS350-HW2-Diller.git) (Moral Support)
 * [Evan Boardway](https://github.com/evanboardway/CIS350-HW2-boardway)
 * [Wyatt Davis](https://github.com/daviswygvsu/CIS350-HW2-Davis)
 * [Ryan Kinahan(waterboy, spiritual guide)](https://github.com/RyanKinahan/CIS350-HW2-Kinahan)
