@@ -20,7 +20,7 @@ evenly while trying to favor each others strengths.
 * Abbey Diller (Moral Support)
 * Evan Boardway
 * [Wyatt Davis](https://github.com/daviswygvsu/CIS350-HW2-Davis)
-* Ryan(waterboy, spiritual guide)
+* [Ryan Kinahan(waterboy, spiritual guide)](https://github.com/RyanKinahan/CIS350-HW2-Kinahan)
 
 ## Prerequisites
 
