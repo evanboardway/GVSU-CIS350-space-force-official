@@ -9,7 +9,7 @@ Our project plan is to create a rouguelike rpg set in an sci-fi environment revo
 The plot outline we've concieved so far is the player controlled character is a pirate escaping Earth. They begin the game with a spaceship and make their way around the galaxy
 with the goal of exploring worlds and systems, seeking to upgrade their ship. The player controlled character will be able to interact and meet different NPC's around the 
 systems, some random and some fixed. We are planning on creating story elements through the backstories and relationships of the NPC's found, as well as certian checkpoints in the game to help keep the player on track. The player will have a set amount of 
-turns to finish their quest for upgrades before they will have to attack Earth, with the main goal being to subjigate or destroy Earth. 
+turns to finish their quest for upgrades before they will have to attack Earth, with the main goal being to subjugate or destroy Earth. 
 
 
 The gameplay will revolve around the player moving around systems and exploring them. They'll have the opportunity to stop at planets, visit upgrade stations/space gas stations, and fight enemies. Depending on our 
