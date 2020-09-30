@@ -19,7 +19,7 @@ evenly while trying to favor each others strengths.
 * Max Foreback
 * Abbey Diller (Moral Support)
 * Evan Boardway
-* Wyatt Davis
+* [Wyatt Davis](https://github.com/daviswygvsu/CIS350-HW2-Davis)
 * Ryan(waterboy, spiritual guide)
 
 ## Prerequisites
