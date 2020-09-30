@@ -6,20 +6,14 @@ Hold a team meeting at least once a week in some format.  Copy the following tem
 
 Team name: space force official 
 
-Members present:all	
+Members present:	
 
-Date:9/23/2020
+Date:
 
-Time:3:30
+Time:
 
 Discussion points: 
 
-* Taught Git to everyone
-* Finished parts of group lab
-* Discussed project plan
-
 Goals for next week (include responsibilities)
 
-* Begin Project
-* Divide roles and responsibilities
 
