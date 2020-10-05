@@ -1,4 +1,4 @@
-# Meeting 1
+# GVSU-CIS350-Space-Force-Official-2000-09-23
 
 Team name: Space Force Official 
 
