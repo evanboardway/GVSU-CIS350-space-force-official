@@ -9,7 +9,7 @@ Members present: All
 Date: 10/11/2020
 
 
-Time: 4:00 PM - 
+Time: 4:00 PM - 6:00 PM
 
 
 ## Discussion Points:
