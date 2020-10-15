@@ -7,11 +7,11 @@ This document contains the functional and nonfunctional requirements for our gam
 1. User Interface
     1. The game shall display an interface menu when pressing the designated menu key. The menu will display player inventory and current objective.
     2. The game shall display the users current statline.
-    3. The user shall be able to move their ship using keys on a keyboard.
 2. Gameplay
     1. The game shall randomly generate a series of planets for the player to explore. The game shall save the generated planet system map for the duration of playthrough.
     2. The game shall randomly select a text-based encounter for the player when the player interacts with a planet.
     3. The game shall allow the user to participate in combat. 
+    4. The user shall be able to move their ship using keys on a keyboard.
 
 # Non-Functional Requirements
 
