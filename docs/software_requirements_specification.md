@@ -22,4 +22,4 @@ This document contains the functional and nonfunctional requirements for our gam
     4. The user shall not have access to the source code. 
 2. Recoverability
     1. The game shall have a save function which will allow players to save their progress and resume their playthrough at a later time.
-    2. The user shall not be able to edit save files outside of the game. 
+    2. The user shall not be able to create false save files outside of the game. 
