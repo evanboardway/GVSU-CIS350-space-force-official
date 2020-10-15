@@ -11,7 +11,7 @@ This document contains the functional and nonfunctional requirements for our gam
 2. Gameplay
     1. The game shall randomly generate a series of planets for the player to explore. The game shall save the generated planet system map for the duration of playthrough.
     2. The game shall randomly select a text-based encounter for the player when the player interacts with a planet.
-    3. The game shall allow the user to participate combat. 
+    3. The game shall allow the user to participate in combat. 
 
 # Non-Functional Requirements
 
