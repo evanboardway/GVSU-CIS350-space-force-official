@@ -16,7 +16,7 @@ This document is an extended use case diagram referencing use case diagram 2.
 	1. Actors: Player
 	2. Description:
 		1. Once a planet is interacted with, give the player opportunity to collect resources. 
-	3. Cross Ref: Non-Functional Requirements, The game shall allow the player to choose from a series of options when having encounters on the planets. The player shall receive either resources or currency based on their choices." 
+	3. Cross Ref: Functional Requirements 3(iv), "Players shall collect resources from planet interactions.." 
 	4. Use-Cases: Player must have completed the Interact with Planets use-case. 
 
 3. Use Case: Encounter
@@ -58,5 +58,5 @@ This document is an extended use case diagram referencing use case diagram 2.
 	1. Actors: Player
 	2. Description:
 		1. The game ends when the player defeats the Earth. 
-	3. Cross Ref: Functional Requirements (send help evan)
+	3. Cross Ref: Functional Requirements2(iv), "The game shall end once all objectives on earth have been completed."
 	4. Use-Cases: Player must have completed Interact with Planets and Complete Objectives on Earth use-cases. 
