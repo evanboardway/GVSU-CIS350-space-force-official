@@ -10,12 +10,15 @@ This document contains the functional and nonfunctional requirements for our gam
 2. Gameplay
     1. The game shall randomly generate a series of planets for the player to explore. The game shall save the generated planet system map for the duration of playthrough.
     2. The game shall randomly select a text-based encounter for the player when the player interacts with a planet.
-    3. The game shall allow the user to participate in combat. 
+    3. The game shall allow the user to participate in combat.
     4. The user shall be able to move their ship using keys on a keyboard.
+    5. The game shall end once all objectives on earth have been completed.
+    6. The game shall have enemy CPU's defending earth.
 3. Game economy
     1. The game shall have items for the player to buy with collected resources.
     2. Items the player can buy shall scale in power to how much they cost in resources.
     3. In game items shall actively change the stats of the player's ship.
+    4. Players shall collect resources from planet interactions.
 4. Player stats
     1. The game shall contain an attack stat: a non-negative value that can be decreased and increased.
     2. The game shall contain a fuel stat: a non-negative value that can be decreased and increased up to a maximum value.
@@ -39,3 +42,4 @@ This document contains the functional and nonfunctional requirements for our gam
     1. Enemy speed in the “Earth” system shall be high enough to offer the player a relative challenge, but not too high as to cause frustration or excessive difficulty.
     2. The amount of resources available to a player shall be high enough so that the player can purchase items on a consistent basis but not so high that the user is always able to purchase every item they encounter.
     3. The game shall have some sort of restrictions that prevent the user from facing the games final challenge and succeeding before experiencing any of the other systems.
+    4. In game travel shall cost fuel in order to move forcing players to be strategic about movement choices.
