@@ -57,6 +57,6 @@ This document is an extended use case diagram referencing use case diagram 2.
 8. Use Case: Beat Game
 	1. Actors: Player
 	2. Description:
-		1. The game ends when the Player defeats the Earth. 
+		1. The game ends when the player defeats the Earth. 
 	3. Cross Ref: Functional Requirements (send help evan)
 	4. Use-Cases: Player must have completed Interact with Planets and Complete Objectives on Earth use-cases. 
