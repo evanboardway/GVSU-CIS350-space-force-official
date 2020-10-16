@@ -8,7 +8,7 @@ This document is an extended use case diagram referencing use case diagram 2.
 	1. Actors: Player
 	2. Description:
 		1. Player moves ship near planet
-		2. Text box is generated showing 
+		2. Text box is generated, giving player different options
 	3. Cross Ref: Functional Requirements 2(i), "The game shall randomly generate a series of planets for the player to explore."
 	4. Use-Cases: Have Start Game use-case complete.
 
