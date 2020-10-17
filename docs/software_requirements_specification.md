@@ -35,6 +35,8 @@ This document contains the functional and nonfunctional requirements for our gam
 2. Recoverability
     1. The game shall have a save function which will allow players to save their progress and resume their playthrough at a later time.
     2. The user shall not be able to create false save files outside of the game.
+    3. Objects shall load data directly from json.
+    4. Save game shall store game objects in a backend with an API call.
 3. Restrictions
     1. The user shall not be allowed to go past certain points on the map.  
     2. The user shall not have access to the source code. 
