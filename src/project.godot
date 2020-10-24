@@ -16,7 +16,21 @@ _global_script_class_icons={
 [application]
 
 config/name="space-force"
+run/main_scene="res://title-screen/TitleScreen.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+PlayerStats="*res://game/player_stats.gd"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+
+[gdnative]
+
+singletons=[  ]
 
 [rendering]
 
