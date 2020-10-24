@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://game/player_stats.gd" type="Script" id=1]
 [ext_resource path="res://game/player-stats/nav_button.gd" type="Script" id=2]
 [ext_resource path="res://game/player-stats/StatsContainer.gd" type="Script" id=3]
 [ext_resource path="res://game/assets/map.png" type="Texture" id=4]
+[ext_resource path="res://game/assets/earth.png" type="Texture" id=5]
+[ext_resource path="res://game/assets/systems/yellow.png" type="Texture" id=6]
+[ext_resource path="res://game/assets/systems/pastel.png" type="Texture" id=7]
+[ext_resource path="res://game/assets/systems/purple.png" type="Texture" id=8]
+[ext_resource path="res://game/assets/systems/orange.png" type="Texture" id=9]
+[ext_resource path="res://game/assets/systems/blue.png" type="Texture" id=10]
+[ext_resource path="res://game/assets/background.png" type="Texture" id=12]
 
 [node name="PlayerStats" type="Control"]
 anchor_right = 1.0
@@ -105,14 +112,149 @@ margin_bottom = 56.0
 texture_normal = ExtResource( 4 )
 expand = true
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="NavMenu" type="PopupMenu" parent="."]
+visible = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 75.0
 margin_top = 75.0
 margin_right = -75.0
-margin_bottom = -75.0
+margin_bottom = -80.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NavBgContainer" type="ViewportContainer" parent="NavMenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Border" type="ColorRect" parent="NavMenu/NavBgContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.823529, 0.823529, 0.823529, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="NavMenu/NavBgContainer/Border"]
+position = Vector2( 565, 282 )
+scale = Vector2( 2.19141, 2.34454 )
+texture = ExtResource( 12 )
+
+[node name="Earth" type="Button" parent="NavMenu"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -263.0
+margin_top = -109.5
+margin_right = -37.0
+margin_bottom = 110.5
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 5 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Blue" type="Button" parent="NavMenu"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -541.0
+margin_top = -195.5
+margin_right = -450.0
+margin_bottom = -103.5
+rect_rotation = 15.5
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 10 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Magenta" type="Button" parent="NavMenu"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -980.0
+margin_top = 79.5
+margin_right = -835.0
+margin_bottom = 199.5
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 8 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pastel" type="Button" parent="NavMenu"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -566.0
+margin_top = 131.5
+margin_right = -443.0
+margin_bottom = 245.5
+rect_rotation = -69.7
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 7 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Orange" type="Button" parent="NavMenu"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -779.0
+margin_top = -83.5
+margin_right = -631.0
+margin_bottom = 41.5
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 9 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Yellow" type="Button" parent="NavMenu"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -911.0
+margin_top = -206.5
+margin_right = -836.0
+margin_bottom = -127.5
+rect_rotation = 86.5
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 6 )
+flat = true
+expand_icon = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

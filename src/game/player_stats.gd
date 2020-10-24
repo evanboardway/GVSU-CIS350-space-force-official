@@ -1,14 +1,16 @@
 extends CanvasLayer
 
 #initializing the player stats
-var attack = 10
-var health = 100
-var speed = 10
-var fuel = 100
+var attack: int = 10
+var health: int = 100
+var speed: int = 10
+var fuel: int = 100
 
-var iron = 0
-var silver = 0
-var gold = 0
+var iron: int = 0
+var silver: int = 0
+var gold: int = 0
+
+var lastScene: String
 
 
 func _ready():
