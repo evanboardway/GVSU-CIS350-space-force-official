@@ -21,7 +21,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-PlayerStats="*res://game/player_stats.gd"
+GameStats="*res://game/game_stats.gd"
 
 [display]
 
