@@ -51,4 +51,4 @@ alignment = 1
 [node name="NewGameButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 2 )]
 margin_top = 141.0
 margin_bottom = 201.0
-scene_to_load = "res://game/player-stats/PlayerStats.tscn"
+scene_to_load = "res://game/Game.tscn"
