@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://game/player_stats.gd" type="Script" id=1]
 [ext_resource path="res://game/player-stats/nav_button.gd" type="Script" id=2]
@@ -11,6 +11,18 @@
 [ext_resource path="res://game/assets/systems/orange.png" type="Texture" id=9]
 [ext_resource path="res://game/assets/systems/blue.png" type="Texture" id=10]
 [ext_resource path="res://game/assets/background.png" type="Texture" id=12]
+
+[sub_resource type="StyleBoxFlat" id=6]
+
+[sub_resource type="StyleBoxFlat" id=1]
+
+[sub_resource type="StyleBoxFlat" id=2]
+
+[sub_resource type="StyleBoxFlat" id=3]
+
+[sub_resource type="StyleBoxFlat" id=4]
+
+[sub_resource type="StyleBoxFlat" id=5]
 
 [node name="PlayerStats" type="Control"]
 anchor_right = 1.0
@@ -117,7 +129,6 @@ __meta__ = {
 }
 
 [node name="NavMenu" type="PopupMenu" parent="."]
-visible = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 75.0
@@ -158,6 +169,7 @@ margin_top = -109.5
 margin_right = -37.0
 margin_bottom = 110.5
 focus_mode = 0
+custom_styles/pressed = SubResource( 6 )
 enabled_focus_mode = 0
 icon = ExtResource( 5 )
 flat = true
@@ -177,6 +189,7 @@ margin_right = -450.0
 margin_bottom = -103.5
 rect_rotation = 15.5
 focus_mode = 0
+custom_styles/pressed = SubResource( 1 )
 enabled_focus_mode = 0
 icon = ExtResource( 10 )
 flat = true
@@ -195,6 +208,7 @@ margin_top = 79.5
 margin_right = -835.0
 margin_bottom = 199.5
 focus_mode = 0
+custom_styles/pressed = SubResource( 2 )
 enabled_focus_mode = 0
 icon = ExtResource( 8 )
 flat = true
@@ -214,6 +228,7 @@ margin_right = -443.0
 margin_bottom = 245.5
 rect_rotation = -69.7
 focus_mode = 0
+custom_styles/pressed = SubResource( 3 )
 enabled_focus_mode = 0
 icon = ExtResource( 7 )
 flat = true
@@ -232,6 +247,7 @@ margin_top = -83.5
 margin_right = -631.0
 margin_bottom = 41.5
 focus_mode = 0
+custom_styles/pressed = SubResource( 4 )
 enabled_focus_mode = 0
 icon = ExtResource( 9 )
 flat = true
@@ -251,6 +267,7 @@ margin_right = -836.0
 margin_bottom = -127.5
 rect_rotation = 86.5
 focus_mode = 0
+custom_styles/pressed = SubResource( 5 )
 enabled_focus_mode = 0
 icon = ExtResource( 6 )
 flat = true
