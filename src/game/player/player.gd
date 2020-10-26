@@ -35,6 +35,7 @@ func get_input():
  
 
 func _physics_process(delta):
+	GameStats.position = get_node("/root/Game/Player").get_position()
 	get_input()
 	rotation += rotation_dir * rotation_speed * delta
 	move_and_collide(velocity * delta)

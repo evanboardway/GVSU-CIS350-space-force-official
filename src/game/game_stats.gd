@@ -11,3 +11,7 @@ var silver: int = 0
 var gold: int = 0
 var coins: int = 100
 
+var position = {
+	"x": 0,
+	"y": 0
+}
