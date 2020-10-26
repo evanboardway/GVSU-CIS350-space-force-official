@@ -11,5 +11,3 @@ var silver: int = 0
 var gold: int = 0
 var coins: int = 100
 
-var lastScene: String
-
