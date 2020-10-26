@@ -1,7 +1,10 @@
 extends Node
 
+onready var earth = preload("res://game/earth/Earth.tscn")
+onready var system = preload("res://game/system/System.tscn")
+onready var player = preload("res://game/player/Player.tscn")
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
-
+	var scene = system.instance()
+	add_child(scene)
+	scene.add_child(player.instance())
