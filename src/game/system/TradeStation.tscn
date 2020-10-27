@@ -20,19 +20,37 @@ shape = SubResource( 1 )
 texture = ExtResource( 1 )
 
 [node name="Zone" type="Sprite" parent="."]
+visible = false
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 4 )
 
-[node name="Label" type="Label" parent="."]
-margin_left = -150.704
-margin_top = -17.4955
-margin_right = 89.2961
-margin_bottom = 2.50449
-rect_scale = Vector2( 1.25, 1.25 )
+[node name="EnterButton" type="Button" parent="."]
+visible = false
+margin_left = -84.1456
+margin_top = -53.033
+margin_right = 27.8544
+margin_bottom = -27.033
+rect_scale = Vector2( 1.5, 1.5 )
+focus_mode = 0
 custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "TRADE STATION"
+enabled_focus_mode = 0
+text = "ENTER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TradeStation" type="Label" parent="."]
+margin_left = -118.087
+margin_top = -53.0331
+margin_right = 121.913
+margin_bottom = -10.0331
+custom_fonts/font = ExtResource( 3 )
+text = "Trade
+Station"
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="pressed" from="EnterButton" to="." method="_on_EnterButton_pressed"]
