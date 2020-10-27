@@ -5,7 +5,7 @@ func _ready():
 	$Health.text = "Health: " + str(GameStats.health)
 	$Attack.text = "Attack: " + str(GameStats.attack)
 	$Speed.text = "Speed: " + str(GameStats.speed)
-	$Fuel.text = "Fuel: " + str(GameStats.fuel) + "%"
+	$Fuel.text = "Fuel: " + str(GameStats.fuel / 100) + "%"
 	$Position.text = "Position: " + str(GameStats.position["x"]) + ", " + str(GameStats.position["y"])
 
 
@@ -14,5 +14,6 @@ func _process(delta):
 	$Health.text = "Health: " + str(GameStats.health)
 	$Attack.text = "Attack: " + str(GameStats.attack)
 	$Speed.text = "Speed: " + str(GameStats.speed)
-	$Fuel.text = "Fuel: " + str(GameStats.fuel) + "%"
+	$Fuel.text = "Fuel: " + str(GameStats.fuel / 100) + "%"
 	$Position.text = "Position: " + str(GameStats.position["x"]) + ", " + str(GameStats.position["y"])
+	

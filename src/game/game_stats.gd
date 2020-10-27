@@ -4,7 +4,7 @@ extends CanvasLayer
 var attack: int = 10
 var health: int = 100
 var speed: int = 300
-var fuel: int = 100
+var fuel: int = 10000
 
 var iron: int = 0
 var silver: int = 0
