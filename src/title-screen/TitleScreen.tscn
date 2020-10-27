@@ -22,13 +22,13 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 542.509, 355.993 )
+position = Vector2( 542.509, 485.993 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 82.0859
-margin_top = 152.167
-margin_right = 1016.09
-margin_bottom = 608.167
+margin_left = 70.0
+margin_top = 202.0
+margin_right = 1016.0
+margin_bottom = 609.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 0.996078, 0.996078, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
@@ -36,13 +36,9 @@ custom_colors/font_color_shadow = Color( 0.168627, 0.0431373, 0.898039, 1 )
 text = "move keys
 *w*
 *a*
-*s*
 *d*
 use your ship to 
 explore the Galaxy
-
-
-
 
 fly into the label when you're ready to begin 
 your adventure "
