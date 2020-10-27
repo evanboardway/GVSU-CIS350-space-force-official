@@ -15,42 +15,28 @@ func _ready():
 
 # returns a map of unique coordinates given a list of existing coordinates.
 func _get_random_coordinates(positions):
-	var needsX = true
-	var needsY = true
+	var validCoords = false
 	var rand = RandomNumberGenerator.new()
 	var x
 	var y
 	
-	while needsX == true:
+	while validCoords == false:
 		rand.randomize()
-		var coord = rand.randf_range(-900, 2000)
-		if is_unique(coord, positions, "x"):
-			x = coord
-			needsX = false
-
-	while needsY == true:
+		var coordX = rand.randf_range(-900, 2000)
 		rand.randomize()
-		var coord = rand.randf_range(-500, 1300)
-		if is_unique(coord, positions, "y"):
-			y = coord
-			needsY = false
-
+		var coordY = rand.randf_range(-500, 1300)
+		if is_unique({"x": coordX, "y": coordY}, positions):
+			x = coordX
+			y = coordY
+			validCoords = true
 	return {
 		"x": x,
 		"y": y
 	}
 
-# SHOULD BE AN EQUATION TO CHECK DISTANCE BETWEEN COORD A AND B
-func is_unique(newCoordinate, positions, type):
-	match type:
-		"x":
-			for coordinate in positions:
-				if (abs(newCoordinate-coordinate["x"])) < 500:
-					return false
-				return true
-		"y":
-			for coordinate in positions:
-				if (abs(newCoordinate-coordinate["y"])) < 500:
-					return false
-				return true
+# AN EQUATION TO CHECK THAT THE DISTANCE BETWEEN COORD A AND B IS GREATER THAN 500
+func is_unique(newPoint, positions):
+	for coordinate in positions:
+		if sqrt(pow((coordinate["x"] - newPoint["x"]), 2) + pow((coordinate["y"] - newPoint["y"]), 2)) < 500:
+			return false
 	return true
