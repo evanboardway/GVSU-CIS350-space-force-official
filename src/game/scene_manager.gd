@@ -6,9 +6,17 @@ extends Node
 # init a dictionary of scene instances.
 
 onready var earth = preload("res://game/earth/Earth.tscn").instance()
-onready var system = preload("res://game/system/System.tscn").instance()
+#onready var system = preload("res://game/system/System.tscn").instance()
 onready var playerStats = preload("res://game/game-stats/PlayerStats.tscn").instance()
 onready var player = preload("res://game/player/Player.tscn").instance()
+
+onready var systems = {
+	"blue": preload("res://game/system/System.tscn").instance(),
+	"pastel": preload("res://game/system/System.tscn").instance(),
+	"orange": preload("res://game/system/System.tscn").instance(),
+	"yellow": preload("res://game/system/System.tscn").instance(),
+	"magenta": preload("res://game/system/System.tscn").instance()
+}
 
 var currentScene
 
@@ -20,7 +28,15 @@ func change_scene(location):
 		"earth":
 			set_scene(earth)
 		"blue":
-			set_scene(system)
+			set_scene(systems[location])
+		"pastel":
+			set_scene(systems[location])
+		"orange":
+			set_scene(systems[location])
+		"yellow":
+			set_scene(systems[location])
+		"magenta":
+			set_scene(systems[location])
 
 
 func set_scene(node_to_add):
@@ -29,4 +45,3 @@ func set_scene(node_to_add):
 		root.remove_child(node)
 	root.add_child(playerStats)
 	root.add_child(node_to_add)
-	root.add_child(player)

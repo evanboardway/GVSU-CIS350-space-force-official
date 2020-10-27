@@ -11,7 +11,6 @@ func _ready():
 		planetInstance.position.x = coordinate["x"]
 		planetInstance.position.y = coordinate["y"]
 		add_child(planetInstance)
-	print(usedPositions)
 
 # returns a map of unique coordinates given a list of existing coordinates.
 func _get_random_coordinates(positions):

@@ -9,13 +9,10 @@ var rotation_dir = 0
 
 func get_input():
 	rotation_dir = 0
-	# Detect up/down/left/right keystate and only move when pressed.
 	velocity = Vector2()
 	if Input.is_key_pressed(68):
-		#elocity.x += 1
 		rotation_dir += 1
 	if Input.is_key_pressed(65):
-		#elocity.x -= 1
 		rotation_dir -= 1
 	if Input.is_key_pressed(83):
 		velocity.y += 1
@@ -35,7 +32,7 @@ func get_input():
  
 
 func _physics_process(delta):
-	GameStats.position = get_node("/root/Game/Player").get_position()
+	#GameStats.position = get_node("/root/Game/System/Player").get_position()
 	get_input()
 	rotation += rotation_dir * rotation_speed * delta
 	move_and_collide(velocity * delta)
