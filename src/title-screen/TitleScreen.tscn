@@ -1,14 +1,20 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://title-screen/title_screen.gd" type="Script" id=1]
-[ext_resource path="res://title-screen/Buttons/NewGameButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://title-screen/space-pirates.png" type="Texture" id=2]
 [ext_resource path="res://title-screen/tradeship.png" type="Texture" id=3]
+[ext_resource path="res://game/player/Player.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 193.933, 67.8218 )
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -2.0
+margin_top = 1.41425
 margin_right = -2.0
+margin_bottom = 1.41425
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -41,14 +47,17 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
-[node name="Buttons" type="VBoxContainer" parent="Menu/CenterRow"]
-margin_right = 1040.0
-margin_bottom = 343.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-alignment = 1
+[node name="Area2D" type="Area2D" parent="Menu/CenterRow"]
 
-[node name="NewGameButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 2 )]
-margin_top = 141.0
-margin_bottom = 201.0
-scene_to_load = "res://game/Game.tscn"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Menu/CenterRow/Area2D"]
+position = Vector2( 526.087, 147.078 )
+shape = SubResource( 1 )
+one_way_collision_margin = 0.0
+
+[node name="Sprite" type="Sprite" parent="Menu/CenterRow/Area2D"]
+position = Vector2( 528.916, 151.321 )
+scale = Vector2( 0.379072, 0.355747 )
+texture = ExtResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+[connection signal="body_entered" from="Menu/CenterRow/Area2D" to="." method="_on_Area2D_body_entered"]
