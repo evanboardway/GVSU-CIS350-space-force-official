@@ -3,7 +3,7 @@
 [ext_resource path="res://game/assets/sprites/character_sprite.png" type="Texture" id=1]
 [ext_resource path="res://game/player/character.gd" type="Script" id=2]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 resource_name = "Idle_E"
 length = 0.1
 tracks/0/type = "value"
@@ -19,7 +19,7 @@ tracks/0/keys = {
 "values": [ 6 ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "Idle_N"
 length = 0.1
 tracks/0/type = "value"
@@ -35,8 +35,7 @@ tracks/0/keys = {
 "values": [ 9 ]
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "Idle_S"
+[sub_resource type="Animation" id=3]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("CharacterSprite:frame")
@@ -150,12 +149,12 @@ position = Vector2( 0, -10.9601 )
 texture = ExtResource( 1 )
 vframes = 4
 hframes = 3
-frame = 1
+frame = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Idle_E = SubResource( 2 )
-anims/Idle_N = SubResource( 3 )
-anims/Idle_S = SubResource( 1 )
+anims/Idle_E = SubResource( 1 )
+anims/Idle_N = SubResource( 2 )
+anims/Idle_S = SubResource( 3 )
 anims/Idle_W = SubResource( 4 )
 anims/Walk_E = SubResource( 5 )
 anims/Walk_N = SubResource( 6 )
