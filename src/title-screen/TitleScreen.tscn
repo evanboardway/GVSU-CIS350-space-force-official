@@ -1,58 +1,72 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://title-screen/title_screen.gd" type="Script" id=1]
-[ext_resource path="res://title-screen/Buttons/NewGameButton.tscn" type="PackedScene" id=2]
-[ext_resource path="res://title-screen/tradeship.png" type="Texture" id=3]
+[ext_resource path="res://title-screen/space-pirates.png" type="Texture" id=2]
+[ext_resource path="res://title-screen/8bitfont.tres" type="DynamicFont" id=3]
 [ext_resource path="res://game/player/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://title-screen/design-8-bit-pixel-art-tiles-bkgs-and-sprites-for-you.jpg" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 193.933, 67.8218 )
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -2.0
+margin_top = 1.41425
 margin_right = -2.0
+margin_bottom = 1.41425
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Menu" type="VBoxContainer" parent="."]
-margin_left = 112.0
-margin_top = 98.0
-margin_right = 1152.0
-margin_bottom = 654.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Logo" type="TextureRect" parent="Menu"]
-margin_right = 1040.0
-margin_bottom = 209.0
-texture = ExtResource( 3 )
-stretch_mode = 4
-flip_v = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CenterRow" type="HBoxContainer" parent="Menu"]
-margin_top = 213.0
-margin_right = 1040.0
-margin_bottom = 556.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-alignment = 1
-
-[node name="Buttons" type="VBoxContainer" parent="Menu/CenterRow"]
-margin_right = 1040.0
-margin_bottom = 343.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-alignment = 1
-
-[node name="NewGameButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 2 )]
-margin_top = 141.0
-margin_bottom = 201.0
-scene_to_load = "res://game/Game.tscn"
-
 [node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 631, 397 )
+position = Vector2( 542.509, 355.993 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 82.0859
+margin_top = 152.167
+margin_right = 1016.09
+margin_bottom = 608.167
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 0.996078, 0.996078, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.168627, 0.0431373, 0.898039, 1 )
+text = "move keys
+*w*
+*a*
+*s*
+*d*
+use your ship to 
+explore the Galaxy
+
+
+
+
+fly into the label when you're ready to begin 
+your adventure "
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 112, 98 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 436.871, 609.856 )
+shape = SubResource( 1 )
+one_way_collision_margin = 0.0
+
+[node name="Sprite" type="Sprite" parent="Area2D"]
+position = Vector2( 442.607, 605.376 )
+scale = Vector2( 0.379072, 0.355747 )
+texture = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 236.339, 793.761 )
+scale = Vector2( 1.39842, 1.66996 )
+texture = ExtResource( 5 )
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

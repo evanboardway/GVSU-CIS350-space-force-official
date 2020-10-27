@@ -6,9 +6,8 @@ extends Node
 # init a dictionary of scene instances.
 
 onready var earth = preload("res://game/earth/Earth.tscn").instance()
-#onready var system = preload("res://game/system/System.tscn").instance()
 onready var playerStats = preload("res://game/game-stats/PlayerStats.tscn").instance()
-onready var player = preload("res://game/player/Player.tscn").instance()
+
 
 onready var systems = {
 	"blue": preload("res://game/system/System.tscn").instance(),
