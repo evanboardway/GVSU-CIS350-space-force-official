@@ -1,7 +1,6 @@
 extends Node
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
-
+	# start the player at the earth scene
+	SceneManager.change_scene("earth")
