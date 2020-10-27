@@ -1,14 +1,8 @@
 extends Node2D
 
-var fuelCost = 0
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
-
-
-
-
 
 func _on_Area2D_body_entered(body):
 	if body.get_class() == "KinematicBody2D":
@@ -18,7 +12,7 @@ func _on_Area2D_body_entered(body):
 
 
 func _on_EnterButton_pressed():
-	print("Enter Button")
+	get_tree().change_scene("res://game/system/trade/TradeCenter.tscn")
 
 
 func _on_Area2D_body_exited(body):

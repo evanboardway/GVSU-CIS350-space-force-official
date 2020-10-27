@@ -8,7 +8,6 @@ extends Node
 onready var earth = preload("res://game/earth/Earth.tscn").instance()
 onready var playerStats = preload("res://game/game-stats/PlayerStats.tscn").instance()
 
-
 onready var systems = {
 	"blue": preload("res://game/system/System.tscn").instance(),
 	"pastel": preload("res://game/system/System.tscn").instance(),
