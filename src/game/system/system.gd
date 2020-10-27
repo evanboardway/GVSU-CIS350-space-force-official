@@ -11,6 +11,10 @@ func _ready():
 		planetInstance.position.x = coordinate["x"]
 		planetInstance.position.y = coordinate["y"]
 		add_child(planetInstance)
+	var tradeStation = load("res://game/system/TradeStation.tscn").instance()
+	tradeStation.position.x = 0
+	tradeStation.position.y = 0
+	add_child(tradeStation)
 
 # returns a map of unique coordinates given a list of existing coordinates.
 func _get_random_coordinates(positions):
@@ -21,9 +25,9 @@ func _get_random_coordinates(positions):
 	
 	while validCoords == false:
 		rand.randomize()
-		var coordX = rand.randf_range(-900, 2000)
+		var coordX = rand.randf_range(-2000, 3100)
 		rand.randomize()
-		var coordY = rand.randf_range(-500, 1300)
+		var coordY = rand.randf_range(-1200, 1900)
 		if is_unique({"x": coordX, "y": coordY}, positions):
 			x = coordX
 			y = coordY
@@ -36,6 +40,8 @@ func _get_random_coordinates(positions):
 # AN EQUATION TO CHECK THAT THE DISTANCE BETWEEN COORD A AND B IS GREATER THAN 500
 func is_unique(newPoint, positions):
 	for coordinate in positions:
-		if sqrt(pow((coordinate["x"] - newPoint["x"]), 2) + pow((coordinate["y"] - newPoint["y"]), 2)) < 500:
+		if sqrt(pow((coordinate["x"] - newPoint["x"]), 2) + pow((coordinate["y"] - newPoint["y"]), 2)) < 1000:
+			return false
+		if sqrt(pow((0 - newPoint["x"]), 2) + pow((0 - newPoint["y"]), 2)) < 500:
 			return false
 	return true

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://game/assets/planets/generic.png" type="Texture" id=1]
+[ext_resource path="res://game/assets/planets/v2/Baren.png" type="Texture" id=1]
 [ext_resource path="res://game/system/planet.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
@@ -23,6 +23,6 @@ script = ExtResource( 2 )
 shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Body"]
-scale = Vector2( 0.210869, 0.210869 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 [connection signal="body_entered" from="Area2D" to="Body" method="_on_Area2D_body_entered"]

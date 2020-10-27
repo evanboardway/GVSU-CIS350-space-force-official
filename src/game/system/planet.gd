@@ -1,14 +1,21 @@
 extends StaticBody2D
 
+#var textures = [
+#	load("res://game/assets/planets/generic.png"),
+#	load("res://game/assets/planets/magenta.png"),
+#	load("res://game/assets/planets/marble.png"),
+#	load("res://game/assets/planets/orange.png"),
+#	load("res://game/assets/planets/purple.png"),
+#	load("res://game/assets/planets/red.png"),
+#	load("res://game/assets/planets/tan.png")
+#	]
+
 var textures = [
-	load("res://game/assets/planets/generic.png"),
-	load("res://game/assets/planets/magenta.png"),
-	load("res://game/assets/planets/marble.png"),
-	load("res://game/assets/planets/orange.png"),
-	load("res://game/assets/planets/purple.png"),
-	load("res://game/assets/planets/red.png"),
-	load("res://game/assets/planets/tan.png")
-	]
+	load("res://game/assets/planets/v2/Baren.png"),
+	load("res://game/assets/planets/v2/Ice.png"),
+	load("res://game/assets/planets/v2/Lava.png"),
+	load("res://game/assets/planets/v2/Terran.png")
+]
 
 var iron: int = 0
 var silver: int = 0
@@ -20,7 +27,7 @@ func _ready():
 	
 	#randomly select planet image
 	rand.randomize()
-	var index = rand.randf_range(0, 6)
+	var index = rand.randf_range(0, 3)
 	$Sprite.texture = textures[index]
 	
 	#randomly generate resources per planet.
