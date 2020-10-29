@@ -5,7 +5,7 @@ func _ready():
 	pass
 
 func _on_Area2D_body_entered(body):
-	if body.get_class() == "KinematicBody2D":
+	if body.get_name() == "Player":
 		$EnterButton.visible = true
 		$TradeStation.visible = false
 		$Zone.visible = false
@@ -16,7 +16,7 @@ func _on_EnterButton_pressed():
 
 
 func _on_Area2D_body_exited(body):
-	if body.get_class() == "KinematicBody2D":
+	if body.get_name() == "Player":
 		$EnterButton.visible = false
 		$TradeStation.visible = true
 		$Zone.visible = true

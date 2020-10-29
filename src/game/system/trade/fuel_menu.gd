@@ -15,11 +15,12 @@ func _ready():
 
 
 func _on_RefuelButton_pressed():
-	fuelBar.margin_right = 1135
-	GameStats.fuel = 10000
-	GameStats.coins -= costToRefil
-	_cost_to_refil()
-	$FuelCost.text = "Cost to refuel: " + str(costToRefil) + " coins"
+	if GameStats.coins >= costToRefil:
+		fuelBar.margin_right = 1135
+		GameStats.fuel = 10000
+		GameStats.coins -= costToRefil
+		_cost_to_refil()
+		$FuelCost.text = "Cost to refuel: " + str(costToRefil) + " coins"
 
 func _cost_to_refil():
 	currentFuel = GameStats.fuel/10000

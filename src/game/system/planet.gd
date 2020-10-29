@@ -41,7 +41,7 @@ func _ready():
 # when the ship contacts a planet it takes the planets resources
 # ABBEY THIS IS WHERE THE ANIMATION CODE COULD BE RENDERED
 func _on_Area2D_body_entered(body):
-	if body.get_class() == "KinematicBody2D" and touched == false:
+	if body.get_name() == "Player" and touched == false:
 		touched = true
 		GameStats.iron += iron
 		GameStats.silver += silver
