@@ -27,7 +27,11 @@ func _check_destination_reached():
 
 func _on_Scope_body_entered(body):
 	if body.get_name() == "Player":
-		pass
+		var system = get_node("/root/Game/System")
+		var laser = load("res://game/player/Lasers.tscn").instance()
+		laser.position = position
+		laser.rotation_degrees = rotation_degrees
+		system.add_child(laser)
 
 
 func _on_DetectionArea_body_entered(body):
