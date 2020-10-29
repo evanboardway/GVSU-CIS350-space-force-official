@@ -9,32 +9,6 @@ radius = 465.5
 [node name="Enemy" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
-[node name="LeftBound" type="ColorRect" parent="."]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -45.1066
-margin_top = -100.062
-margin_right = -43.1066
-margin_bottom = -20.0615
-rect_rotation = -30.0
-color = Color( 0.737255, 0.541176, 0.541176, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="RightBound" type="ColorRect" parent="."]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = 43.8461
-margin_top = -100.553
-margin_right = 45.8461
-margin_bottom = -20.5527
-rect_rotation = 30.0
-color = Color( 0.737255, 0.541176, 0.541176, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 
@@ -44,6 +18,7 @@ texture = ExtResource( 1 )
 polygon = PoolVector2Array( 0.290909, -34.6581, -5.18916, -32.5368, -44.08, -100.242, 44.8386, -99.8887, 5.771, -32.7136 )
 
 [node name="DetectionArea" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
 shape = SubResource( 1 )
