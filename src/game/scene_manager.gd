@@ -16,30 +16,45 @@ onready var systems = {
 	"magenta": preload("res://game/system/System.tscn").instance()
 }
 
-var currentScene
+var previousScene
 
 func _ready():
-	print("ready")
+	pass
 
 func change_scene(location):
 	match location:
 		"earth":
+			previousScene = location
 			set_scene(earth)
+		"trade_center":
+			set_scene(load("res://game/system/trade/TradeCenter.tscn").instance())
 		"blue":
+			previousScene = location
 			set_scene(systems[location])
 		"pastel":
+			previousScene = location
 			set_scene(systems[location])
 		"orange":
+			previousScene = location
 			set_scene(systems[location])
 		"yellow":
+			previousScene = location
 			set_scene(systems[location])
 		"magenta":
+			previousScene = location
 			set_scene(systems[location])
+		"trading_store":
+			set_scene(load("res://game/system/trade/TradingStore.tscn").instance())
 
 
 func set_scene(node_to_add):
+	print(node_to_add)
 	var root = get_node("/root/Game")
 	for node in root.get_children():
 		root.remove_child(node)
 	root.add_child(playerStats)
 	root.add_child(node_to_add)
+
+# previous scene should only be a referene to the key in the systems dict
+func previous_scene():
+	set_scene(systems[previousScene])

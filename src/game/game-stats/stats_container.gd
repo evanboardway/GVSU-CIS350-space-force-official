@@ -15,5 +15,5 @@ func _process(delta):
 	$Attack.text = "Attack* " + str(GameStats.attack)
 	$Speed.text = "Speed* " + str(GameStats.speed)
 	$Fuel.text = "Fuel* " + str(GameStats.fuel / 100) + "%"
-	$Position.text = "Position* " + str(GameStats.position["x"]) + ", " + str(GameStats.position["y"])
+	#$Position.text = "Position* " + str(GameStats.position["x"]) + ", " + str(GameStats.position["y"])
 	

@@ -149,7 +149,7 @@ position = Vector2( 0, -10.9601 )
 texture = ExtResource( 1 )
 vframes = 4
 hframes = 3
-frame = 3
+frame = 6
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Idle_E = SubResource( 1 )
