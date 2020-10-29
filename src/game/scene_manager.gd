@@ -26,8 +26,6 @@ func change_scene(location):
 		"earth":
 			previousScene = location
 			set_scene(earth)
-		"trade_center":
-			set_scene(load("res://game/system/trade/TradeCenter.tscn").instance())
 		"blue":
 			previousScene = location
 			set_scene(systems[location])
@@ -48,7 +46,6 @@ func change_scene(location):
 
 
 func set_scene(node_to_add):
-	print(node_to_add)
 	var root = get_node("/root/Game")
 	for node in root.get_children():
 		root.remove_child(node)

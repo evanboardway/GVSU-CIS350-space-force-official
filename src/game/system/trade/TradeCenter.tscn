@@ -6,10 +6,35 @@
 [ext_resource path="res://title-screen/8bitfont.tres" type="DynamicFont" id=4]
 [ext_resource path="res://game/assets/backgrounds/alt.png" type="Texture" id=5]
 [ext_resource path="res://game/assets/portal2.png" type="Texture" id=6]
-[ext_resource path="res://game/system/trade/trade_center.gd" type="Script" id=7]
 [ext_resource path="res://game/assets/tilesets/dungeon_v1.png" type="Texture" id=8]
 
-[sub_resource type="TileSet" id=1]
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+
+var tradingStoreShown = false
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass
+
+func _on_Portal_body_entered(body):
+	if body.get_class() == \"KinematicBody2D\":
+		SceneManager.previous_scene()
+
+
+func _on_ResourcesStation_body_entered(body):
+	if body.get_class() == \"KinematicBody2D\":
+		SceneManager.set_scene(\"trading_store\")
+
+
+func _on_FuelStation_body_entered(body):
+	if body.get_class() == \"KinematicBody2D\":
+		print(\"fuel\")
+"
+
+[sub_resource type="TileSet" id=2]
 0/name = "alt.png 0"
 0/texture = ExtResource( 5 )
 0/tex_offset = Vector2( 0, 0 )
@@ -25,7 +50,7 @@
 0/shapes = [  ]
 0/z_index = 0
 
-[sub_resource type="TileSet" id=2]
+[sub_resource type="TileSet" id=3]
 0/name = "Walls.png 0"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
@@ -475,7 +500,7 @@
 31/shapes = [  ]
 31/z_index = 0
 
-[sub_resource type="TileSet" id=3]
+[sub_resource type="TileSet" id=4]
 0/name = "dungeon_v1.png 0"
 0/texture = ExtResource( 8 )
 0/tex_offset = Vector2( 0, 0 )
@@ -729,31 +754,31 @@
 17/shapes = [  ]
 17/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 45, 45 )
-
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 100, 30 )
+extents = Vector2( 45, 45 )
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 100, 30 )
 
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 100, 30 )
+
 [node name="TradeCenter" type="Node2D"]
-script = ExtResource( 7 )
+script = SubResource( 1 )
 
 [node name="Space" type="TileMap" parent="."]
-tile_set = SubResource( 1 )
+tile_set = SubResource( 2 )
 format = 1
 tile_data = PoolIntArray( -327686, -1073741824, 0, -327683, -1073741824, 0, -393216, -1073741824, 0, -393213, -1073741824, 0, -393210, -1073741824, 0, -393207, -1073741824, 0, -393204, -1073741824, 0, -393201, -1073741824, 0, -393198, -1073741824, 0, -393197, -1073741824, 0, -393194, -1073741824, 0, -327658, -1073741824, 0, -131078, -1073741824, 0, -131075, -1073741824, 0, -196608, -1073741824, 0, -196607, -1073741824, 0, -196604, -1073741824, 0, -196601, -1073741824, 0, -196598, -1073741824, 0, -196595, -1073741824, 0, -196592, -1073741824, 0, -196589, -1073741824, 0, -131072, -1073741824, 0, -131050, -1073741824, 0, -65520, -1073741824, 0, 65530, -1073741824, 0, 65533, -1073741824, 0, 19, -1073741824, 0, 65536, -1073741824, 0, 65558, -1073741824, 0, 131088, -1073741824, 0, 262138, -1073741824, 0, 262141, -1073741824, 0, 196627, -1073741824, 0, 262144, -1073741824, 0, 262166, -1073741824, 0, 327696, -1073741824, 0, 458746, -1073741824, 0, 458749, -1073741824, 0, 393235, -1073741824, 0, 458752, -1073741824, 0, 458774, -1073741824, 0, 524304, -1073741824, 0, 655354, -1073741824, 0, 655357, -1073741824, 0, 589843, -1073741824, 0, 655360, -1073741824, 0, 655376, -1073741824, 0, 655382, -1073741824, 0, 851962, -1073741824, 0, 851965, -1073741824, 0, 786451, -1073741824, 0, 851968, -1073741824, 0, 851971, -1073741824, 0, 851974, -1073741824, 0, 851977, -1073741824, 0, 851980, -1073741824, 0, 851983, -1073741824, 0, 851984, -1073741824, 0, 851987, -1073741824, 0, 851990, -1073741824, 0, 1048570, -1073741824, 0, 1048573, -1073741824, 0, 1114106, -1073741824, 0, 1114109, -1073741824, 0, 1048576, -1073741824, 0, 1048577, -1073741824, 0, 1048580, -1073741824, 0, 1048583, -1073741824, 0, 1048586, -1073741824, 0, 1048589, -1073741824, 0, 1048592, -1073741824, 0, 1048595, -1073741824, 0, 1048598, -1073741824, 0 )
 
 [node name="Center" type="TileMap" parent="."]
-tile_set = SubResource( 2 )
+tile_set = SubResource( 3 )
 cell_size = Vector2( 96, 96 )
 format = 1
 tile_data = PoolIntArray( -65534, 0, 0, -65533, 10, 0, -65532, 10, 0, -65531, 10, 0, -65530, 22, 0, -65529, 10, 0, -65528, 10, 0, -65527, 10, 0, -65526, 2, 0, 2, 5, 0, 3, 22, 0, 4, 22, 0, 5, 22, 0, 6, 15, 0, 7, 22, 0, 8, 22, 0, 9, 22, 0, 10, 5, 0, 65538, 5, 0, 65539, 19, 0, 65540, 19, 0, 65541, 19, 0, 65542, 19, 0, 65543, 19, 0, 65544, 19, 0, 65545, 19, 0, 65546, 5, 0, 131074, 5, 0, 131075, 19, 0, 131076, 19, 0, 131077, 19, 0, 131078, 19, 0, 131079, 19, 0, 131080, 19, 0, 131081, 19, 0, 131082, 5, 0, 196610, 5, 0, 196611, 19, 0, 196612, 19, 0, 196613, 4, 0, 196614, 19, 0, 196615, 4, 0, 196616, 19, 0, 196617, 19, 0, 196618, 5, 0, 262146, 5, 0, 262147, 19, 0, 262148, 19, 0, 262149, 12, 0, 262150, 10, 0, 262151, 13, 0, 262152, 19, 0, 262153, 19, 0, 262154, 5, 0, 327682, 5, 0, 327683, 19, 0, 327684, 19, 0, 327685, 19, 0, 327686, 19, 0, 327687, 19, 0, 327688, 19, 0, 327689, 19, 0, 327690, 5, 0, 393218, 5, 0, 393219, 19, 0, 393220, 19, 0, 393221, 19, 0, 393222, 19, 0, 393223, 19, 0, 393224, 19, 0, 393225, 19, 0, 393226, 5, 0, 458754, 5, 0, 458755, 24, 0, 458756, 24, 0, 458757, 24, 0, 458758, 4, 0, 458759, 24, 0, 458760, 24, 0, 458761, 24, 0, 458762, 5, 0, 524290, 12, 0, 524291, 1, 0, 524292, 1, 0, 524293, 1, 0, 524294, 24, 0, 524295, 1, 0, 524296, 1, 0, 524297, 1, 0, 524298, 13, 0 )
 
 [node name="Stations" type="TileMap" parent="."]
-tile_set = SubResource( 3 )
+tile_set = SubResource( 4 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( -131053, 8, 0, -131038, 8, 0, -131029, 8, 0, -131014, 8, 0, -65515, 1, 0, -65513, 1, 0, -65512, 6, 0, -65511, 536870913, 0, -65509, 1, 0, -65508, 7, 0, -65507, 1, 0, -65505, 536870913, 0, -65491, 1, 0, -65490, 536870913, 0, -65489, 536870913, 0, -65487, 536870913, 0, -65486, 536870913, 0, -65484, 536870913, 0, -65483, 536870913, 0, -65481, 536870913, 0, 22, 536870917, 0, 26, 536870928, 0, 29, 536870928, 0, 31, 536870917, 0, 65558, 0, 0, 65560, 0, 0, 65562, 536870922, 0, 65564, 0, 0, 65566, 0, 0, 65582, 536870912, 0, 65584, 536870912, 0, 65585, 536870912, 0, 65586, 536870922, 0, 65587, 536870912, 0, 65589, 536870912, 0, 65590, 536870912, 0, 131094, 536870915, 0, 131095, 536870915, 0, 131096, 536870915, 0, 131097, 536870915, 0, 131100, 536870915, 0, 131101, 536870915, 0, 131102, 536870915, 0, 131103, 536870915, 0, 131120, 536870915, 0, 131121, 536870915, 0, 131124, 536870915, 0, 131125, 536870915, 0, 131126, 536870915, 0, 131127, 536870915, 0 )
@@ -762,7 +787,7 @@ tile_data = PoolIntArray( -131053, 8, 0, -131038, 8, 0, -131029, 8, 0, -131014, 
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Portal"]
 position = Vector2( 623.582, 337.754 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="Portal"]
 visible = false
@@ -820,13 +845,13 @@ position = Vector2( 626.503, 257.223 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ResourcesStation"]
 position = Vector2( 432.749, 30.4056 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="FuelStation" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FuelStation"]
 position = Vector2( 815, 30 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 [connection signal="body_entered" from="Portal" to="." method="_on_Portal_body_entered"]
 [connection signal="body_entered" from="ResourcesStation" to="." method="_on_ResourcesStation_body_entered"]
 [connection signal="body_entered" from="FuelStation" to="." method="_on_FuelStation_body_entered"]
