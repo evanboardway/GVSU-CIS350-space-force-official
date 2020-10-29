@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-
+var isPlayer = true
 var speed = GameStats.speed
 var velocity = Vector2()
 
@@ -21,12 +21,6 @@ func get_input():
 			velocity = Vector2(speed,0).rotated(rotation)
 			if (get_tree().current_scene.name != "TitleScreen"):
 				GameStats.fuel = GameStats.fuel - 1
-			
-		#Code for backwards movement if needed later	
-		#if Input.is_key_pressed(83):
-		#	velocity.y += 1
-		#	velocity = Vector2(-speed,0).rotated(rotation)
-		#	GameStats.fuel = GameStats.fuel - 1
 		
 	# THIS IS FOR DEV PURPOSES. UP AND DOWN KEYS CHANGE SPEED
 	if Input.is_action_pressed("ui_up"):
@@ -39,8 +33,7 @@ func get_input():
  
 
 func _physics_process(delta):
-	#GameStats.position = get_node("/root/Game/System/Player").get_position()
+	GameStats.position = position
 	get_input()
 	rotation += rotation_dir * rotation_speed * delta
-# warning-ignore:return_value_discarded
 	move_and_collide(velocity * delta)

@@ -2,6 +2,25 @@ extends Node2D
 
 # generates new planets at random unique positions on the map.
 func _ready():
+	_add_planets_to_system()
+	_add_enemies_to_system()
+	var tradeStation = load("res://game/system/TradeStation.tscn").instance()
+	tradeStation.position.x = 0
+	tradeStation.position.y = 0
+	add_child(tradeStation)
+
+func _add_enemies_to_system():
+	var enemy = load("res://game/player/Enemy.tscn")
+	var usedPositions = []
+	for i in range(0, 3):
+		var enemyInstance = enemy.instance()
+		var coordinate = _get_random_coordinates(usedPositions)
+		usedPositions.append(coordinate)
+		enemyInstance.position.x = coordinate["x"]
+		enemyInstance.position.y = coordinate["y"]
+		add_child(enemyInstance)
+
+func _add_planets_to_system():
 	var planet = load("res://game/system/Planet.tscn")
 	var usedPositions = []
 	for i in range(0, 10):
@@ -11,10 +30,6 @@ func _ready():
 		planetInstance.position.x = coordinate["x"]
 		planetInstance.position.y = coordinate["y"]
 		add_child(planetInstance)
-	var tradeStation = load("res://game/system/TradeStation.tscn").instance()
-	tradeStation.position.x = 0
-	tradeStation.position.y = 0
-	add_child(tradeStation)
 
 # returns a map of unique coordinates given a list of existing coordinates.
 func _get_random_coordinates(positions):
