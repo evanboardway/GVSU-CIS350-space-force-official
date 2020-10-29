@@ -27,25 +27,22 @@ func _check_destination_reached():
 
 func _on_Scope_body_entered(body):
 	if body.get_name() == "Player":
-		print("PLAYER")
+		pass
 
 
 func _on_DetectionArea_body_entered(body):
 	if body.get_name() == "Player":
-		print("player detected")
 		detectedPlayer = true
 		destination = Vector2(GameStats.position)
 
 
 func _on_DetectionArea_body_exited(body):
 	if body.get_name() == "Player":
-		print("player exited")
 		detectedPlayer = false
 		destination = _get_random_destination()
 
 
 func _get_random_destination():
-	print("random dest")
 	rand.randomize()
 	var coordX = rand.randf_range(-1500, 2800)
 	rand.randomize()

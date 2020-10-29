@@ -21,7 +21,8 @@ texture = ExtResource( 3 )
 
 [node name="TopRow" type="HBoxContainer" parent="."]
 anchor_right = 1.0
-margin_bottom = 26.0
+margin_top = 55.0
+margin_bottom = 50.0
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -30,31 +31,32 @@ __meta__ = {
 [node name="Resources" type="Button" parent="TopRow"]
 margin_left = 516.0
 margin_right = 594.0
-margin_bottom = 26.0
+margin_bottom = 20.0
 text = "Resources"
 
 [node name="Fuel" type="Button" parent="TopRow"]
 margin_left = 598.0
 margin_right = 637.0
-margin_bottom = 26.0
+margin_bottom = 20.0
 text = "Fuel"
 
 [node name="Weapons" type="Button" parent="TopRow"]
 margin_left = 641.0
 margin_right = 712.0
-margin_bottom = 26.0
+margin_bottom = 20.0
 text = "Weapons"
 
 [node name="Close" type="Button" parent="TopRow"]
 margin_left = 716.0
 margin_right = 763.0
-margin_bottom = 26.0
+margin_bottom = 20.0
 text = "Close"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ResourcesMenu" type="PopupMenu" parent="."]
+visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
