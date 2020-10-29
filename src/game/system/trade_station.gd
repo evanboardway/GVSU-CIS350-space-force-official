@@ -12,7 +12,7 @@ func _on_Area2D_body_entered(body):
 
 
 func _on_EnterButton_pressed():
-	get_tree().change_scene("res://game/system/trade/TradeCenter.tscn")
+	SceneManager.change_scene("trading_store")
 
 
 func _on_Area2D_body_exited(body):
