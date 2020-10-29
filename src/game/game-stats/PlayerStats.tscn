@@ -50,11 +50,11 @@ __meta__ = {
 [node name="CurrentLocation" type="Label" parent="player_stats/Container"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -65.0
-margin_right = 65.0
+margin_left = -120.0
+margin_right = 120.0
 margin_bottom = 20.0
 custom_fonts/font = ExtResource( 15 )
-text = "System"
+text = "blank System"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
