@@ -32,6 +32,8 @@
 [node name="PlayerStats" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -1.41418
+margin_right = -1.41418
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -64,6 +66,25 @@ __meta__ = {
 [node name="PlayerPosition" type="Label" parent="player_stats/Container"]
 margin_right = 40.0
 margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ErrorLabel" type="VBoxContainer" parent="player_stats/Container"]
+margin_left = 10.0
+margin_top = 30.0
+margin_right = 250.0
+margin_bottom = 73.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="player_stats/Container/ErrorLabel"]
+margin_right = 240.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0.960784, 0.568627, 0.568627, 1 )
+text = "kinda long Message"
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

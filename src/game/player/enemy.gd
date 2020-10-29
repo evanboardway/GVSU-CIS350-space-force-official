@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var destination
-var speed: int = GameStats.enemySpeed
+var speed: int
 var moveDirection
 var velocity = Vector2()
 var rand = RandomNumberGenerator.new()
@@ -27,7 +27,7 @@ func _check_destination_reached():
 
 func _on_Scope_body_entered(body):
 	if body.get_name() == "Player":
-		var system = get_node("/root/Game/System")
+		var system = get_node("/root/Game")
 		var laser = load("res://game/player/Lasers.tscn").instance()
 		laser.position = position
 		laser.rotation_degrees = rotation_degrees
@@ -38,6 +38,8 @@ func _on_DetectionArea_body_entered(body):
 	if body.get_name() == "Player":
 		detectedPlayer = true
 		destination = Vector2(GameStats.position)
+	else:
+		destination = _get_random_destination()
 
 
 func _on_DetectionArea_body_exited(body):

@@ -13,7 +13,8 @@ onready var systems = {
 	"pastel": preload("res://game/system/System.tscn").instance(),
 	"orange": preload("res://game/system/System.tscn").instance(),
 	"yellow": preload("res://game/system/System.tscn").instance(),
-	"magenta": preload("res://game/system/System.tscn").instance()
+	"magenta": preload("res://game/system/System.tscn").instance(),
+	"earth": earth
 }
 
 var previousScene

@@ -11,9 +11,23 @@ var silver: int = 0
 var gold: int = 0
 var coins: int = 100
 
-var enemySpeed: int = 100
+
+var canTeleport = false
 
 var position = {
 	"x": 0,
 	"y": 0
 }
+
+var errorMessage = ""
+
+func set_error_message(message: String):
+	errorMessage = message
+	var timer = Timer.new()
+	timer.connect("timeout",self,"_timeout") 
+	timer.wait_time = 5
+	add_child(timer)
+	timer.start()
+
+func _timeout():
+	errorMessage = ""

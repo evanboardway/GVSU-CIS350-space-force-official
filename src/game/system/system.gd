@@ -18,6 +18,7 @@ func _add_enemies_to_system():
 		usedPositions.append(coordinate)
 		enemyInstance.position.x = coordinate["x"]
 		enemyInstance.position.y = coordinate["y"]
+		enemyInstance.speed = 150
 		add_child(enemyInstance)
 
 func _add_planets_to_system():

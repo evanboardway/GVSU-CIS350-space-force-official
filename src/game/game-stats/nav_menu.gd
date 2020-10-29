@@ -1,24 +1,44 @@
 extends PopupMenu
 
+var error: String = "You must be within the zone of a trade station to teleport"
+
 func _on_Earth_pressed():
-	SceneManager.change_scene("earth")
+	if GameStats.canTeleport:
+		SceneManager.change_scene("earth")
+	else:
+		GameStats.set_error_message(error)
 
 
 func _on_Blue_pressed():
-	SceneManager.change_scene("blue")
+	if GameStats.canTeleport:
+		SceneManager.change_scene("blue")
+	else:
+		GameStats.set_error_message(error)
 
 
 func _on_Pastel_pressed():
-	SceneManager.change_scene("pastel")
+	if GameStats.canTeleport:
+		SceneManager.change_scene("pastel")
+	else:
+		GameStats.set_error_message(error)
 
 
 func _on_Orange_pressed():
-	SceneManager.change_scene("orange")
+	if GameStats.canTeleport:
+		SceneManager.change_scene("orange")
+	else:
+		GameStats.set_error_message(error)
 
 
 func _on_Yellow_pressed():
-	SceneManager.change_scene("yellow")
+	if GameStats.canTeleport:
+		SceneManager.change_scene("yellow")
+	else:
+		GameStats.set_error_message(error)
 
 
 func _on_Magenta_pressed():
-	SceneManager.change_scene("magenta")
+	if GameStats.canTeleport:
+		SceneManager.change_scene("magenta")
+	else:
+		GameStats.set_error_message(error)

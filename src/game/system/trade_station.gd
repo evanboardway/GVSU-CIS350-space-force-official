@@ -9,6 +9,7 @@ func _on_Area2D_body_entered(body):
 		$EnterButton.visible = true
 		$TradeStation.visible = false
 		$Zone.visible = false
+		GameStats.canTeleport = true
 
 
 func _on_EnterButton_pressed():
@@ -20,3 +21,4 @@ func _on_Area2D_body_exited(body):
 		$EnterButton.visible = false
 		$TradeStation.visible = true
 		$Zone.visible = true
+		GameStats.canTeleport = false
