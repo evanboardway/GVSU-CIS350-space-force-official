@@ -15,11 +15,13 @@ func get_input():
 		rotation_dir += .5
 	if Input.is_key_pressed(65):
 		rotation_dir -= .5
-	if GameStats.fuel > 0:
+	if GameStats.fuel / 100 > 0:
 		if Input.is_key_pressed(87):
 			velocity.y -= 1
 			velocity = Vector2(speed,0).rotated(rotation)
-			GameStats.fuel = GameStats.fuel - 1
+			if (get_tree().current_scene.name != "TitleScreen"):
+				GameStats.fuel = GameStats.fuel - 1
+			
 		#Code for backwards movement if needed later	
 		#if Input.is_key_pressed(83):
 		#	velocity.y += 1
@@ -40,4 +42,5 @@ func _physics_process(delta):
 	#GameStats.position = get_node("/root/Game/System/Player").get_position()
 	get_input()
 	rotation += rotation_dir * rotation_speed * delta
+# warning-ignore:return_value_discarded
 	move_and_collide(velocity * delta)
