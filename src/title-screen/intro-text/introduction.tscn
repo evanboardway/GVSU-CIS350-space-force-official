@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://title-screen/intro-text/introduction.gd" type="Script" id=1]
+[ext_resource path="res://title-screen/nasalization-rg.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+draw_center = false
+
+[sub_resource type="DynamicFont" id=2]
+size = 17
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 41
+font_data = ExtResource( 2 )
+
+[node name="Panel" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 33.0
+margin_top = 31.0
+margin_right = 1250.0
+margin_bottom = 620.0
+custom_fonts/normal_font = SubResource( 2 )
+meta_underlined = false
+text = "	The year is 3056. You are a captain for one of NASA's elite charters... or at least you were.
+
+	You remember that cursed day as if it were yesterday... A cup of fresh coffee and a hot breakfast is interrupted by pounding on your door. It's your boss, the Admiral, accompanied by a concerning number of security officers. The Admiral wordlessly hands you a piece of NASA stationary, which in bold letters reads:
+	
+	\"By the order of the Supreme Commander of NASA, you are hereby banished for crimes of piracy.\"
+	
+	You have barely a moment to process this before the security officers storm the room and drag you outside, to a tiny junker ship. You're ushered upboard at gunpoint. An automated protocol fires up the ship and launches you into the stratosphere before you can even get your bearings.
+	
+	Now, hardly 24 hours later, you sit in the dusty cabin of your \"new\" ship, when suddenly you feel rage. Piracy? You aren't a pirate! How dare they do this to you, after 20 years of loyal service? After waiting endlessly for a promotion without complaining? After giving up everything for your career?
+	
+	You won't stand for this. Satisfaction demands you have your revenge.
+
+	You fire up the ship's nav console and an empty map flickers to life in front of you. You'll have to find your own way among the stars. This ship is small, barely more than a BB gun duct-taped to a tin can.  As of now, you don't stand a chance against the massive NASA fighter ships. But you're smart, crafty, and you are no longer restricted by the law. If you gather resources, trade for better weapons...
+
+	They accused you of being a pirate. You'd hate to disappoint. You'll become the most fearsome pirate the Earth has ever seen.
+
+	They'll be sorry."
+
+[node name="Label" type="Label" parent="."]
+margin_left = 893.983
+margin_top = 636.142
+margin_right = 1261.98
+margin_bottom = 712.142
+custom_fonts/font = SubResource( 3 )
+text = "PRESS ENTER..."
+
+[node name="ColorRect" type="ColorRect" parent="."]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0823529, 0.0509804, 0.184314, 1 )

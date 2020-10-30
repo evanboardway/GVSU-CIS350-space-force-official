@@ -1,0 +1,266 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://game/8bitfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://game/system/trade/trading_store.gd" type="Script" id=2]
+[ext_resource path="res://game/assets/backgrounds/black.png" type="Texture" id=3]
+[ext_resource path="res://game/system/trade/resources_menu.gd" type="Script" id=4]
+[ext_resource path="res://game/system/trade/fuel_menu.gd" type="Script" id=5]
+
+[node name="TradeStore" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 638.921, 359.711 )
+scale = Vector2( 0.853632, 0.479903 )
+texture = ExtResource( 3 )
+
+[node name="TopRow" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+margin_top = 55.0
+margin_bottom = 50.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resources" type="Button" parent="TopRow"]
+margin_left = 516.0
+margin_right = 594.0
+margin_bottom = 20.0
+text = "Resources"
+
+[node name="Fuel" type="Button" parent="TopRow"]
+margin_left = 598.0
+margin_right = 637.0
+margin_bottom = 20.0
+text = "Fuel"
+
+[node name="Weapons" type="Button" parent="TopRow"]
+margin_left = 641.0
+margin_right = 712.0
+margin_bottom = 20.0
+text = "Weapons"
+
+[node name="Close" type="Button" parent="TopRow"]
+margin_left = 716.0
+margin_right = 763.0
+margin_bottom = 20.0
+text = "Close"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ResourcesMenu" type="PopupMenu" parent="."]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -579.0
+margin_top = -279.5
+margin_right = 579.0
+margin_bottom = 279.5
+hide_on_item_selection = false
+hide_on_checkable_item_selection = false
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IronContainer" type="VBoxContainer" parent="ResourcesMenu"]
+anchor_left = 0.238
+anchor_top = 0.502
+anchor_right = 0.238
+anchor_bottom = 0.502
+margin_left = -70.604
+margin_top = -118.118
+margin_right = 71.396
+margin_bottom = 117.882
+grow_vertical = 2
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ResourcesMenu/IronContainer"]
+margin_top = 73.0
+margin_right = 142.0
+margin_bottom = 139.0
+custom_fonts/font = ExtResource( 1 )
+text = "30 Iron
+x
+5 coin"
+align = 1
+valign = 3
+autowrap = true
+
+[node name="TradeIronButton" type="Button" parent="ResourcesMenu/IronContainer"]
+margin_top = 143.0
+margin_right = 142.0
+margin_bottom = 163.0
+grow_vertical = 2
+text = "TRADE"
+
+[node name="SilverContainer" type="VBoxContainer" parent="ResourcesMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -73.0
+margin_top = -71.0
+margin_right = 77.0
+margin_bottom = 73.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ResourcesMenu/SilverContainer"]
+margin_top = 27.0
+margin_right = 150.0
+margin_bottom = 93.0
+custom_fonts/font = ExtResource( 1 )
+text = "15 Silver
+x
+30 Coin"
+align = 1
+
+[node name="TradeSilverButton" type="Button" parent="ResourcesMenu/SilverContainer"]
+margin_top = 97.0
+margin_right = 150.0
+margin_bottom = 117.0
+text = "TRADE"
+
+[node name="GoldContainer" type="VBoxContainer" parent="ResourcesMenu"]
+anchor_left = 0.767
+anchor_top = 0.5
+anchor_right = 0.767
+anchor_bottom = 0.5
+margin_left = -65.186
+margin_top = -41.5
+margin_right = 65.814
+margin_bottom = 62.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ResourcesMenu/GoldContainer"]
+margin_right = 131.0
+margin_bottom = 66.0
+custom_fonts/font = ExtResource( 1 )
+text = "5 Gold
+x
+100 Coin"
+align = 1
+
+[node name="TradeGoldButton" type="Button" parent="ResourcesMenu/GoldContainer"]
+margin_top = 70.0
+margin_right = 131.0
+margin_bottom = 90.0
+text = "TRADE"
+
+[node name="FuelMenu" type="PopupMenu" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -579.0
+margin_top = -279.5
+margin_right = 579.0
+margin_bottom = 279.5
+hide_on_item_selection = false
+hide_on_checkable_item_selection = false
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FuelMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -60.0
+margin_top = -20.0
+margin_right = 60.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RefuelButton" type="Button" parent="FuelMenu/VBoxContainer"]
+margin_right = 132.0
+margin_bottom = 26.0
+custom_fonts/font = ExtResource( 1 )
+text = "Refuel"
+
+[node name="FuelBarContainer" type="ColorRect" parent="FuelMenu"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = -75.0
+margin_right = -10.0
+margin_bottom = -31.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FuelLevel" type="ColorRect" parent="FuelMenu/FuelBarContainer"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 1135.0
+margin_bottom = 42.0
+color = Color( 0.827451, 0.309804, 0.309804, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="FuelMenu"]
+margin_left = 11.0
+margin_top = 467.0
+margin_right = 76.0
+margin_bottom = 481.0
+text = "Fuel Level"
+
+[node name="FuelCost" type="Label" parent="FuelMenu"]
+anchor_left = 0.5
+anchor_top = 0.407
+anchor_right = 0.5
+anchor_bottom = 0.407
+margin_left = -214.0
+margin_top = -13.013
+margin_right = 216.0
+margin_bottom = 6.987
+custom_fonts/font = ExtResource( 1 )
+text = "cost to refuel: 250 coins"
+align = 1
+valign = 1
+
+[node name="WeaponsMenu" type="PopupMenu" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -579.0
+margin_top = -279.5
+margin_right = 579.0
+margin_bottom = 279.5
+hide_on_item_selection = false
+hide_on_checkable_item_selection = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="TopRow/Resources" to="." method="_on_Resources_pressed"]
+[connection signal="pressed" from="TopRow/Fuel" to="." method="_on_Fuel_pressed"]
+[connection signal="pressed" from="TopRow/Weapons" to="." method="_on_Weapons_pressed"]
+[connection signal="pressed" from="TopRow/Close" to="." method="_on_Close_pressed"]
+[connection signal="pressed" from="ResourcesMenu/IronContainer/TradeIronButton" to="ResourcesMenu" method="_on_TradeIronButton_pressed"]
+[connection signal="pressed" from="ResourcesMenu/SilverContainer/TradeSilverButton" to="ResourcesMenu" method="_on_TradeSilverButton_pressed"]
+[connection signal="pressed" from="ResourcesMenu/GoldContainer/TradeGoldButton" to="ResourcesMenu" method="_on_TradeGoldButton_pressed"]
+[connection signal="pressed" from="FuelMenu/VBoxContainer/RefuelButton" to="FuelMenu" method="_on_RefuelButton_pressed"]
