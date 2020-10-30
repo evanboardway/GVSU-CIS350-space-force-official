@@ -6,6 +6,16 @@
 * Expected time to complete: 5 hours
 * Responsible persons: Everyone
 
+### Design physics and keymapping so user can fly ship
+* Description: Create an object the user can control on the screen.
+* Expected time to complete: 1 hour
+* Responsible persons: Ryan Kinahan
+
+### Generate planets in random locations on map
+* Description: Have planets spawn at random locations each time the game is loaded.
+* Expected time to complete: 2 hours
+* Responsible persons: Evan Boardway
+
 ### Design and implement title screen
 * Description: Create title screen for the game, displaying game title and option to start game
 * Expected time to complete: 5 hours
@@ -22,6 +32,16 @@
 * Description: Draw a series of 5 32x32 tilesets to use for creating the maps, including floor, rock/walls, and resource tiles
 * Expected time to complete: 8 hours
 * Responsible persons: Abbey Diller
+
+### Polish combat system 
+* Description: Finalize combat system to player can fight enemy ships.
+* Expected time to complete: 5 hours
+* Responsible persons: Evan Boardway, Max Foreback, Ryan Kinahan
+
+### Add animations 
+* Description: Add animations between transitions, like landing on a planet or going to a trade station.
+* Expected time to complete: 3 hours
+* Responsible persons: Wyatt Davis, Evan Boardway
 
 ### Create maps
 * Description: Design 10 maps for planet exploration
