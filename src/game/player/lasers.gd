@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var destination
+var destination = Vector2()
 var velocity = Vector2()
 
 func _ready():
@@ -9,8 +9,6 @@ func _ready():
 func _physics_process(delta):
 	velocity = position.direction_to(destination) * 500
 	velocity = move_and_slide(velocity)
-
-
 
 func _on_Timer_timeout():
 	queue_free()
