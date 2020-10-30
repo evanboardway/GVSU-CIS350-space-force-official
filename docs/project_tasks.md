@@ -26,6 +26,31 @@
 * Expected time to complete: 1 hour
 * Responsible persons: Abbey Diller
 
+### Add enemy bots to the game
+* Description: Add enemy ships that damage the player on contact.
+* Expected time to complete: 2 hours
+* Responsible persons: Evan Boardway
+
+### Create trade menu 
+* Description: Allow players to interact with a menu to trade resources from a trade center
+* Expected time to complete: 1 hours
+* Responsible persons: Evan Boardway
+
+### Allow player to shoot lasers
+* Description: Allow the player to shoot lasers in the direction they're facing
+* Expected time to complete: 4 hours
+* Responsible persons: Evan Boardway
+
+### Allow enemies to shoot lasers when in contact with the player
+* Description: Enemies will fire a laser that damages the player when the player enters their direct field of vision.
+* Expected time to complete: 1 hour
+* Responsible persons: Evan Boardway
+
+### Make enemy ships follow player 
+* Description: Enemy ships will follow a player when the player comes within a certain radius of the enemy
+* Expected time to complete: 1 hour
+* Responsible persons: Evan Boardway
+
 ## Incomplete Tasks
 
 ### Design Tilesets
@@ -52,3 +77,13 @@
 * Description: Draw a scene to display at the end of the game (if you win) depicting the player chilling on the moon, with an exploded earth in the background
 * Time to complete: 2 hours
 * Responsible persons: Abbey Diller
+
+### Create end game case
+* Description: Check for all scenarios that would end the game.
+* Time to complete: 15 minutes.
+* Responsible persons: Evan Boardway
+
+### Allow players to enter a planet to collect resources
+* Description: Players will enter a planey upon clicking a button that takes them to the surface where they can search for resources.
+* Time to complete: 5 hours
+* Responsible persons:  Abbey Diller, Evan Boardway
