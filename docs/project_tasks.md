@@ -51,6 +51,16 @@
 * Expected time to complete: 1 hour
 * Responsible persons: Evan Boardway
 
+### Add fuel tracking
+* Description: Fuel must decrease when the player moves in applicable areas and must stay in appropriate range. 
+* Expected time to complete: 1 hour
+* Responisble persons: Max Foreback
+
+### Add warning text box
+* Description: Warnings will appear and flash when the player is low on fuel. 
+* Expected time to complete: 1 hour
+* Responisble persons: Max Foreback
+
 ## Incomplete Tasks
 
 ### Design Tilesets
@@ -87,3 +97,13 @@
 * Description: Players will enter a planey upon clicking a button that takes them to the surface where they can search for resources.
 * Time to complete: 5 hours
 * Responsible persons:  Abbey Diller, Evan Boardway
+
+### Implement a system for crewmates
+* Description: Add crewmates that can be recruited from resources or story choices for bonuses.
+* Time to complete: 5 hours
+* Responsible persons: Max Foreback, Abbey Diller
+
+### Add an refuel NPC
+* Description: Add an NPC that will exchange coin for fuel at an inflated price if the player runs out. 
+* Time to complete: 2 hours
+* Responsible persons: Max Foreback
