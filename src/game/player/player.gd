@@ -1,11 +1,11 @@
 extends KinematicBody2D
 
-var isPlayer = true
 var speed = GameStats.speed
 var velocity = Vector2()
 
 var rotation_speed = 7.0
 var rotation_dir = 0
+var moveDirection
 
 func get_input():
 	rotation_dir = 0
@@ -29,6 +29,8 @@ func get_input():
 	if Input.is_action_pressed("ui_down"):
 		GameStats.speed -= 10
 		speed = GameStats.speed
+	if (Input.is_key_pressed(KEY_SPACE)):
+		_shoot_laser()
 	velocity = velocity.normalized() * speed
  
 
@@ -37,3 +39,12 @@ func _physics_process(delta):
 	get_input()
 	rotation += rotation_dir * rotation_speed * delta
 	move_and_collide(velocity * delta)
+
+func _shoot_laser():
+	var system = get_node("/root/Game")
+	var laser = load("res://game/player/weapons/PlayerLasers.tscn").instance()
+	var destination = position
+	laser.position = position
+	laser.rotation_degrees = rotation_degrees + 90
+	laser.playerVelocity = velocity
+	system.add_child(laser)

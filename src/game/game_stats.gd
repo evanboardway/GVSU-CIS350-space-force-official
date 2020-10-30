@@ -11,6 +11,7 @@ var silver: int = 0
 var gold: int = 0
 var coins: int = 100
 
+var earthHealth: int = 10000
 
 var canTeleport = false
 
