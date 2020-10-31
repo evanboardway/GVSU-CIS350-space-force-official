@@ -103,7 +103,17 @@
 * Time to complete: 5 hours
 * Responsible persons: Max Foreback, Abbey Diller
 
-### Add an refuel NPC
+### Add a refuel NPC
 * Description: Add an NPC that will exchange coin for fuel at an inflated price if the player runs out. 
 * Time to complete: 2 hours
 * Responsible persons: Max Foreback
+
+### Design Ship Upgrades
+* Description: Make a list of potential available upgrades for the ship, including descriptions, sprites and stat buffs.
+* Time to complete: 1 hour
+* Responsible persons: Wyatt Davis
+
+### Implement Ship Upgrades
+* Description: Add the ability to purchase upgrades from shop using coin: increases player stats and lowers player's current coin.
+* Time to complete: 2 hours
+* Responsible persons: Wyatt Davis
