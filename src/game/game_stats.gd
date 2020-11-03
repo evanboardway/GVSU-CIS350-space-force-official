@@ -32,3 +32,7 @@ func set_error_message(message: String):
 
 func _timeout():
 	errorMessage = ""
+
+func _process(delta):
+	if health <= 0:
+		set_error_message("YOU DEAD BOI")
