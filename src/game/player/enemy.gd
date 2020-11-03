@@ -14,7 +14,7 @@ func _physics_process(delta):
 	velocity = position.direction_to(destination) * speed
 	moveDirection = rad2deg(destination.angle_to_point(position))
 	rotation_degrees = moveDirection + 90
-	velocity = move_and_slide(velocity)
+	velocity = move_and_collide(velocity)
 	if !detectedPlayer:
 		_check_destination_reached()
 	else:

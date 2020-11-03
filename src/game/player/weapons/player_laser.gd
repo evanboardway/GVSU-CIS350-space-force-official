@@ -16,6 +16,8 @@ func _on_Timer_timeout():
 
 
 func _on_Area2D_body_entered(body):
-	queue_free()
-	if body.get_name() == "EarthBody":
-		GameStats.earthHealth -= GameStats.attack
+	if !("PlayerLaser" in body.get_name()) and body.get_name() != "Player":
+		get_node("AnimationPlayer").play("explosion")
+		$LaserSprite.visible = false
+		if body.get_name() == "EarthBody":
+			GameStats.earthHealth -= GameStats.attack
