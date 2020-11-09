@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://title-screen/title_screen.gd" type="Script" id=1]
 [ext_resource path="res://title-screen/space-pirates.png" type="Texture" id=2]
@@ -8,6 +8,22 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 193.933, 67.8218 )
+
+[sub_resource type="SegmentShape2D" id=2]
+a = Vector2( 1572.89, 235.212 )
+b = Vector2( -1115.08, 235.212 )
+
+[sub_resource type="SegmentShape2D" id=3]
+a = Vector2( -485.027, 1694.56 )
+b = Vector2( -491.02, 211.239 )
+
+[sub_resource type="SegmentShape2D" id=4]
+a = Vector2( 965.334, 232.216 )
+b = Vector2( 962.338, 1700.56 )
+
+[sub_resource type="SegmentShape2D" id=5]
+a = Vector2( -500.01, 1343.96 )
+b = Vector2( 986.311, 1343.96 )
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
@@ -22,13 +38,13 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 542.509, 485.993 )
+position = Vector2( 350, 1300 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 70.0
-margin_top = 202.0
-margin_right = 1016.0
-margin_bottom = 609.0
+margin_left = -76.0
+margin_top = 989.0
+margin_right = 743.0
+margin_bottom = 1288.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 0.996078, 0.996078, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
@@ -48,7 +64,7 @@ __meta__ = {
 }
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 112, 98 )
+position = Vector2( -110, -200 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 436.871, 609.856 )
@@ -65,4 +81,46 @@ show_behind_parent = true
 position = Vector2( 236.339, 793.761 )
 scale = Vector2( 1.39842, 1.66996 )
 texture = ExtResource( 5 )
+
+[node name="Borders" type="StaticBody2D" parent="."]
+
+[node name="TopWall" type="CollisionShape2D" parent="Borders"]
+shape = SubResource( 2 )
+
+[node name="LeftWall" type="CollisionShape2D" parent="Borders"]
+shape = SubResource( 3 )
+
+[node name="RightWall" type="CollisionShape2D" parent="Borders"]
+shape = SubResource( 4 )
+
+[node name="BottomWall" type="CollisionShape2D" parent="Borders"]
+shape = SubResource( 5 )
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 75.0
+margin_top = 525.0
+margin_right = 591.0
+margin_bottom = 925.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0.168627, 0.0431373, 0.898039, 1 )
+text = "*Credits*
+
+Lead Engineer
+*Evan BoardWay*
+
+physics engineer
+*Max Foreback*
+
+User Interface
+*Ryan KInahan*
+
+Story Design
+*Abbey diller*
+
+Public Relations
+*Wyatt Davis*"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
