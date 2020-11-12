@@ -18,3 +18,4 @@ func _on_TradeGoldButton_pressed():
 	if GameStats.gold >= 5:
 		GameStats.gold -= 5
 		GameStats.coins += 100
+

@@ -16,10 +16,10 @@ b = Vector2( -1108.4, 19.0945 )
 [sub_resource type="SegmentShape2D" id=3]
 a = Vector2( -2.54587, 1491.98 )
 
-[sub_resource type="SegmentShape2D" id=5]
+[sub_resource type="SegmentShape2D" id=4]
 b = Vector2( -0.53595, 1240.77 )
 
-[sub_resource type="SegmentShape2D" id=4]
+[sub_resource type="SegmentShape2D" id=5]
 a = Vector2( -524.87, 9.85693 )
 b = Vector2( 1584.75, 9.85693 )
 
@@ -92,11 +92,11 @@ shape = SubResource( 3 )
 
 [node name="RightWall" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 974, 200 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="BottomWall" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 0, 1350 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Credits" type="Label" parent="."]
 margin_left = 382.0

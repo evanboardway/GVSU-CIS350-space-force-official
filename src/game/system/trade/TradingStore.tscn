@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://game/8bitfont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://game/system/trade/trading_store.gd" type="Script" id=2]
 [ext_resource path="res://game/assets/backgrounds/black.png" type="Texture" id=3]
 [ext_resource path="res://game/system/trade/resources_menu.gd" type="Script" id=4]
 [ext_resource path="res://game/system/trade/fuel_menu.gd" type="Script" id=5]
+[ext_resource path="res://game/system/trade/UpgradesMenu.gd" type="Script" id=6]
 
 [node name="TradeStore" type="Control"]
 anchor_right = 1.0
@@ -40,15 +41,15 @@ margin_right = 637.0
 margin_bottom = 20.0
 text = "Fuel"
 
-[node name="Weapons" type="Button" parent="TopRow"]
+[node name="Upgrades" type="Button" parent="TopRow"]
 margin_left = 641.0
-margin_right = 712.0
+margin_right = 713.0
 margin_bottom = 20.0
-text = "Weapons"
+text = "Upgrades"
 
 [node name="Close" type="Button" parent="TopRow"]
-margin_left = 716.0
-margin_right = 763.0
+margin_left = 717.0
+margin_right = 764.0
 margin_bottom = 20.0
 text = "Close"
 __meta__ = {
@@ -56,7 +57,6 @@ __meta__ = {
 }
 
 [node name="ResourcesMenu" type="PopupMenu" parent="."]
-visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -242,7 +242,7 @@ text = "cost to refuel: 250 coins"
 align = 1
 valign = 1
 
-[node name="WeaponsMenu" type="PopupMenu" parent="."]
+[node name="UpgradesMenu" type="PopupMenu" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -253,14 +253,84 @@ margin_right = 579.0
 margin_bottom = 279.5
 hide_on_item_selection = false
 hide_on_checkable_item_selection = false
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="WeaponContainer" type="VBoxContainer" parent="UpgradesMenu"]
+margin_left = 71.66
+margin_top = 209.655
+margin_right = 381.66
+margin_bottom = 253.655
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WeaponUpgrade" type="Button" parent="UpgradesMenu/WeaponContainer"]
+margin_right = 310.0
+margin_bottom = 20.0
+text = "100 Coins"
+
+[node name="WeaponLabel" type="Label" parent="UpgradesMenu/WeaponContainer"]
+margin_top = 24.0
+margin_right = 310.0
+margin_bottom = 44.0
+custom_fonts/font = ExtResource( 1 )
+text = "Blaster Upgrade 1"
+align = 1
+
+[node name="HealthContainer" type="VBoxContainer" parent="UpgradesMenu"]
+margin_left = 420.504
+margin_top = 210.47
+margin_right = 730.504
+margin_bottom = 254.47
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthUpgrade" type="Button" parent="UpgradesMenu/HealthContainer"]
+margin_right = 310.0
+margin_bottom = 20.0
+text = "100 Coins"
+
+[node name="HealthLabel" type="Label" parent="UpgradesMenu/HealthContainer"]
+margin_top = 24.0
+margin_right = 310.0
+margin_bottom = 44.0
+custom_fonts/font = ExtResource( 1 )
+text = "Health Upgrade 1"
+align = 1
+
+[node name="SpeedContainer" type="VBoxContainer" parent="UpgradesMenu"]
+margin_left = 783.343
+margin_top = 212.038
+margin_right = 1093.34
+margin_bottom = 256.038
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpeedUpgrade" type="Button" parent="UpgradesMenu/SpeedContainer"]
+margin_right = 310.0
+margin_bottom = 20.0
+text = "100 Coins"
+
+[node name="SpeedLabel" type="Label" parent="UpgradesMenu/SpeedContainer"]
+margin_top = 24.0
+margin_right = 310.0
+margin_bottom = 44.0
+custom_fonts/font = ExtResource( 1 )
+text = "Booster Upgrade 1"
+align = 1
 [connection signal="pressed" from="TopRow/Resources" to="." method="_on_Resources_pressed"]
 [connection signal="pressed" from="TopRow/Fuel" to="." method="_on_Fuel_pressed"]
-[connection signal="pressed" from="TopRow/Weapons" to="." method="_on_Weapons_pressed"]
+[connection signal="pressed" from="TopRow/Upgrades" to="." method="_on_Upgrades_pressed"]
 [connection signal="pressed" from="TopRow/Close" to="." method="_on_Close_pressed"]
 [connection signal="pressed" from="ResourcesMenu/IronContainer/TradeIronButton" to="ResourcesMenu" method="_on_TradeIronButton_pressed"]
 [connection signal="pressed" from="ResourcesMenu/SilverContainer/TradeSilverButton" to="ResourcesMenu" method="_on_TradeSilverButton_pressed"]
 [connection signal="pressed" from="ResourcesMenu/GoldContainer/TradeGoldButton" to="ResourcesMenu" method="_on_TradeGoldButton_pressed"]
 [connection signal="pressed" from="FuelMenu/VBoxContainer/RefuelButton" to="FuelMenu" method="_on_RefuelButton_pressed"]
+[connection signal="pressed" from="UpgradesMenu/WeaponContainer/WeaponUpgrade" to="UpgradesMenu" method="_on_WeaponUpgrade_pressed"]
+[connection signal="pressed" from="UpgradesMenu/HealthContainer/HealthUpgrade" to="UpgradesMenu" method="_on_HealthUpgrade_pressed"]
+[connection signal="pressed" from="UpgradesMenu/SpeedContainer/SpeedUpgrade" to="UpgradesMenu" method="_on_SpeedUpgrade_pressed"]

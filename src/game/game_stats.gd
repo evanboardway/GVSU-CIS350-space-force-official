@@ -15,6 +15,21 @@ var earthHealth: int = 10000
 
 var canTeleport = false
 
+var weapon0 = true
+var weapon1 = true
+var weapon2 = true
+var weapon3 = true
+
+var health0 = true
+var health1 = true
+var health2 = true
+var health3 = true
+
+var speed0 = true
+var speed1 = true
+var speed2 = true
+var speed3 = true
+
 var position = {
 	"x": 0,
 	"y": 0
