@@ -7,7 +7,6 @@ extends Node
 
 onready var earth = preload("res://game/earth/Earth.tscn").instance()
 onready var playerStats = preload("res://game/game-stats/PlayerStats.tscn").instance()
-
 onready var systems = {
 	"blue": preload("res://game/system/System.tscn").instance(),
 	"pastel": preload("res://game/system/System.tscn").instance(),
@@ -18,6 +17,7 @@ onready var systems = {
 }
 
 var previousScene
+var gameStatus
 
 func _ready():
 	pass
@@ -56,3 +56,7 @@ func set_scene(node_to_add):
 # previous scene should only be a referene to the key in the systems dict
 func previous_scene():
 	set_scene(systems[previousScene])
+
+func game_over(status):
+		gameStatus = status
+		get_tree().change_scene("res://game/game-stats/GameOver.tscn")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://game/game_stats.gd" type="Script" id=1]
 [ext_resource path="res://game/game-stats/nav_button.gd" type="Script" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://game/game-stats/WarningLabelContainer.gd" type="Script" id=14]
 [ext_resource path="res://game/8bitfont.tres" type="DynamicFont" id=15]
 [ext_resource path="res://game/game-stats/location_position_stats.gd" type="Script" id=16]
+[ext_resource path="res://game/game-stats/earth_health_container.gd" type="Script" id=17]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -377,6 +378,26 @@ __meta__ = {
 margin_right = 150.0
 margin_bottom = 20.0
 custom_fonts/font = ExtResource( 15 )
+
+[node name="EarthHealthContainer" type="HBoxContainer" parent="player_stats"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -135.778
+margin_top = -58.1716
+margin_right = -9.77808
+margin_bottom = -31.1716
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EarthHealth" type="Label" parent="player_stats/EarthHealthContainer"]
+margin_top = 6.0
+margin_right = 126.0
+margin_bottom = 20.0
+text = "Earth Health: 10000"
 [connection signal="pressed" from="player_stats/NavMenu/Earth" to="player_stats/NavMenu" method="_on_Earth_pressed"]
 [connection signal="pressed" from="player_stats/NavMenu/Blue" to="player_stats/NavMenu" method="_on_Blue_pressed"]
 [connection signal="pressed" from="player_stats/NavMenu/Magenta" to="player_stats/NavMenu" method="_on_Magenta_pressed"]
