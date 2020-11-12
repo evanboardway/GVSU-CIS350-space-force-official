@@ -2,12 +2,12 @@ extends Control
 
 var resourcesMenu
 var fuelMenu
-var weaponsMenu
+var upgradesMenu
 
 func _ready():
 	resourcesMenu = get_node("ResourcesMenu")
 	fuelMenu = get_node("FuelMenu")
-	weaponsMenu = get_node("WeaponsMenu")
+	upgradesMenu = get_node("UpgradesMenu")
 	resourcesMenu.show()
 
 
@@ -16,19 +16,19 @@ func _on_Resources_pressed():
 	if !$ResourcesMenu.visible:
 		resourcesMenu.show()
 		fuelMenu.hide()
-		weaponsMenu.hide()
+		upgradesMenu.hide()
 
 
 func _on_Fuel_pressed():
 	if !$FuelMenu.visible:
 		fuelMenu.show()
 		resourcesMenu.hide()
-		weaponsMenu.hide()
+		upgradesMenu.hide()
 
 
-func _on_Weapons_pressed():
-	if !$WeaponsMenu.visible:
-		weaponsMenu.show()
+func _on_Upgrades_pressed():
+	if !$UpgradesMenu.visible:
+		upgradesMenu.show()
 		resourcesMenu.hide()
 		fuelMenu.hide()
 
