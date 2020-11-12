@@ -22,6 +22,22 @@ var position = {
 
 var errorMessage = ""
 
+var _earthHealthTimer
+
+func _ready():
+	_earthHealthTimer = Timer.new()
+	add_child(_earthHealthTimer)
+	_earthHealthTimer.connect("timeout", self, "_on_earth_timer_timeout")
+	_earthHealthTimer.set_wait_time(1.0)
+	_earthHealthTimer.set_one_shot(false) # Make sure it loops
+	_earthHealthTimer.start()
+
+func _on_earth_timer_timeout():
+	if earthHealth < 10000:
+		earthHealth += 30
+	if earthHealth > 10000:
+		earthHealth = 10000
+
 func set_error_message(message: String):
 	errorMessage = message
 	var timer = Timer.new()
@@ -32,3 +48,11 @@ func set_error_message(message: String):
 
 func _timeout():
 	errorMessage = ""
+
+func _process(delta):
+	if earthHealth <= 0:
+		SceneManager.game_over("win")
+	if health < 50:
+		set_error_message("Low health!!!")
+	if health <= 0:
+		SceneManager.game_over("loss")
