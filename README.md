@@ -16,3 +16,4 @@ Our project plan is to create a rouguelike rpg set in an sci-fi environment revo
 ## Prerequisites
 
 ## Run Instructions
+just run it 
