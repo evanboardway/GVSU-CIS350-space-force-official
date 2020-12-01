@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Teal 2.png-671388b2ae584d156916de8ce83decaf.stex"
+path="res://.import/Pink 2.png-8fc803595049425905e2d2eedbda962e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/system/planet-maps/Teal 2.png"
-dest_files=[ "res://.import/Teal 2.png-671388b2ae584d156916de8ce83decaf.stex" ]
+source_file="res://game/assets/tilesets/Pink 2.png"
+dest_files=[ "res://.import/Pink 2.png-8fc803595049425905e2d2eedbda962e.stex" ]
 
 [params]
 

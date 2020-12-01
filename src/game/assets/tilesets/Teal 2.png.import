@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Walls.png-dfb9a966c51d865d27fa6b7a263fd696.stex"
+path="res://.import/Teal 2.png-2c94781069675795fb26de9caa270be3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/assets/tilesets/Walls.png"
-dest_files=[ "res://.import/Walls.png-dfb9a966c51d865d27fa6b7a263fd696.stex" ]
+source_file="res://game/assets/tilesets/Teal 2.png"
+dest_files=[ "res://.import/Teal 2.png-2c94781069675795fb26de9caa270be3.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

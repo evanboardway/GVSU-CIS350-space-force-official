@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Blue 2.png-5c89ebc0c45ae9174e4bfce06fa68107.stex"
+path="res://.import/Orange 2.png-343426fe3a712ccb17b74ad77e369fef.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/system/planet-maps/Blue 2.png"
-dest_files=[ "res://.import/Blue 2.png-5c89ebc0c45ae9174e4bfce06fa68107.stex" ]
+source_file="res://game/assets/tilesets/Orange 2.png"
+dest_files=[ "res://.import/Orange 2.png-343426fe3a712ccb17b74ad77e369fef.stex" ]
 
 [params]
 
