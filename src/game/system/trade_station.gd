@@ -10,6 +10,7 @@ func _on_Area2D_body_entered(body):
 		$TradeStation.visible = false
 		$Zone.visible = false
 		GameStats.canTeleport = true
+		GameStats.set_error_message("Neutral zone: Enemies can't hurt you.")
 
 
 func _on_EnterButton_pressed():
