@@ -5,22 +5,24 @@ extends Node
 
 # init a dictionary of scene instances.
 
-onready var earth = preload("res://game/earth/Earth.tscn").instance()
-onready var playerStats = preload("res://game/game-stats/PlayerStats.tscn").instance()
-onready var systems = {
-	"blue": preload("res://game/system/System.tscn").instance(),
-	"pastel": preload("res://game/system/System.tscn").instance(),
-	"orange": preload("res://game/system/System.tscn").instance(),
-	"yellow": preload("res://game/system/System.tscn").instance(),
-	"magenta": preload("res://game/system/System.tscn").instance(),
-	"earth": earth
-}
+onready var earth
+onready var playerStats
+onready var systems
 
 var previousScene
 var gameStatus
 
 func _ready():
-	pass
+	earth = load("res://game/earth/Earth.tscn").instance()
+	playerStats = load("res://game/game-stats/PlayerStats.tscn").instance()
+	systems = {
+		"blue": load("res://game/system/System.tscn").instance(),
+		"pastel": load("res://game/system/System.tscn").instance(),
+		"orange": load("res://game/system/System.tscn").instance(),
+		"yellow": load("res://game/system/System.tscn").instance(),
+		"magenta": load("res://game/system/System.tscn").instance(),
+		"earth": earth
+	}
 
 func change_scene(location):
 	match location:

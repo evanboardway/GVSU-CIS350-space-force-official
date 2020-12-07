@@ -36,7 +36,7 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 542.509, 485.993 )
+position = Vector2( 541.644, 519.016 )
 
 [node name="Instructions" type="Label" parent="."]
 margin_left = 70.0

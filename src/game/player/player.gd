@@ -1,11 +1,14 @@
 extends KinematicBody2D
 
-var speed = GameStats.speed
+var speed
 var velocity = Vector2()
 
 var rotation_speed = 7.0
 var rotation_dir = 0
 var moveDirection
+
+func _ready():
+	speed = GameStats.speed
 
 func get_input():
 	rotation_dir = 0
@@ -29,7 +32,7 @@ func get_input():
 	if Input.is_action_pressed("ui_down"):
 		GameStats.speed -= 10
 		speed = GameStats.speed
-	if (Input.is_key_pressed(KEY_SPACE)):
+	if (Input.is_key_pressed(KEY_SPACE) && get_tree().current_scene.name != "TitleScreen"):
 		_shoot_laser()
 	velocity = velocity.normalized() * speed
  
