@@ -1,11 +1,8 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://game/assets/backgrounds/alt.png" type="Texture" id=1]
-[ext_resource path="res://game/assets/backgrounds/Fog.png" type="Texture" id=2]
 [ext_resource path="res://game/system/system.gd" type="Script" id=3]
 [ext_resource path="res://game/player/Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://game/assets/backgrounds/Fog3.png" type="Texture" id=6]
-[ext_resource path="res://game/assets/backgrounds/Fog2.png" type="Texture" id=7]
 
 [sub_resource type="TileSet" id=1]
 resource_local_to_scene = true
@@ -62,7 +59,6 @@ b = Vector2( -1019.06, -2063.97 )
 
 [sub_resource type="TileSet" id=4]
 0/name = "Fog.png 0"
-0/texture = ExtResource( 2 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 294, 167, 734, 596 )
@@ -76,7 +72,6 @@ b = Vector2( -1019.06, -2063.97 )
 0/shapes = [  ]
 0/z_index = 0
 1/name = "Fog2.png 1"
-1/texture = ExtResource( 7 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( -10, 638, 936, 371 )
@@ -90,7 +85,6 @@ b = Vector2( -1019.06, -2063.97 )
 1/shapes = [  ]
 1/z_index = 0
 2/name = "Fog3.png 2"
-2/texture = ExtResource( 6 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 5, 5, 430, 805 )
@@ -106,7 +100,6 @@ b = Vector2( -1019.06, -2063.97 )
 
 [sub_resource type="TileSet" id=5]
 0/name = "Fog3.png 0"
-0/texture = ExtResource( 6 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 171, 82, 460, 516 )

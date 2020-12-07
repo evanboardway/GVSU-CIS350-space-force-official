@@ -26,7 +26,7 @@ func _check_destination_reached():
 
 
 func _on_Scope_body_entered(body):
-	if body.get_name() == "Player":
+	if body.get_name() == "Player" && !GameStats.canTeleport:
 		var system = get_node("/root/Game")
 		var laser = load("res://game/player/Lasers.tscn").instance()
 		laser.position = position
@@ -35,7 +35,7 @@ func _on_Scope_body_entered(body):
 
 
 func _on_DetectionArea_body_entered(body):
-	if body.get_name() == "Player":
+	if body.get_name() == "Player" && !GameStats.canTeleport:
 		detectedPlayer = true
 		destination = Vector2(GameStats.position)
 	else:

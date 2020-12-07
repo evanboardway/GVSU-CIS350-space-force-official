@@ -18,7 +18,6 @@ texture = ExtResource( 1 )
 polygon = PoolVector2Array( 0.290909, -34.6581, -5.18916, -32.5368, -44.08, -100.242, 44.8386, -99.8887, 5.771, -32.7136 )
 
 [node name="DetectionArea" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
 shape = SubResource( 1 )
