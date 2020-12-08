@@ -37,7 +37,6 @@ var errorMessage = ""
 var _earthHealthTimer
 
 func _ready():
-	print("ready")
 	earthHealth = 10000
 	attack = 10
 	health = 100
@@ -100,4 +99,7 @@ func _process(delta):
 	if health < 50:
 		set_error_message("Low health!!!")
 	if health <= 0:
+		SceneManager.game_over("loss")
+	if fuel <= 0:
+		fuel = 10
 		SceneManager.game_over("loss")

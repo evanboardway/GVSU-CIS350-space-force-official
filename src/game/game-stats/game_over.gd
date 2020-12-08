@@ -10,4 +10,6 @@ func _ready():
 			$ColorRect.color = "620000"
 
 func _on_ReturnButton_pressed():
+	GameStats._ready()
+	SceneManager._ready()
 	get_tree().change_scene("res://title-screen/TitleScreen.tscn")
