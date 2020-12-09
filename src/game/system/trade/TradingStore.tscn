@@ -581,7 +581,7 @@ text = "Hire"
 [connection signal="pressed" from="UpgradesMenu/WeaponContainer/WeaponUpgrade" to="UpgradesMenu" method="_on_WeaponUpgrade_pressed"]
 [connection signal="pressed" from="UpgradesMenu/HealthContainer/HealthUpgrade" to="UpgradesMenu" method="_on_HealthUpgrade_pressed"]
 [connection signal="pressed" from="UpgradesMenu/SpeedContainer/SpeedUpgrade" to="UpgradesMenu" method="_on_SpeedUpgrade_pressed"]
-[connection signal="pressed" from="CrewmatesMenu/CrewContainer1/Hire1" to="CrewmatesMenu" method="_on_Hire_pressed"]
+[connection signal="pressed" from="CrewmatesMenu/CrewContainer1/Hire1" to="CrewmatesMenu" method="_on_Hire1_pressed"]
 [connection signal="pressed" from="CrewmatesMenu/CrewContainer2/Hire2" to="CrewmatesMenu" method="_on_Hire2_pressed"]
 [connection signal="pressed" from="CrewmatesMenu/CrewContainer3/Hire3" to="CrewmatesMenu" method="_on_Hire3_pressed"]
 [connection signal="pressed" from="CrewmatesMenu/CrewContainer4/Hire4" to="CrewmatesMenu" method="_on_Hire4_pressed"]

@@ -11,22 +11,14 @@ func _ready():
 	#Currently errors on second instance in same system
 	var curr = SceneManager.get_prev()
 	var info = GameStats.available[curr]
-	
+	GameStats.coins += 10000
 	if not GameStats.available[curr]:
 			createCrew()
 	
 	for crewmate in GameStats.available[curr]:
 		lst.append(crewmate)
-		
-	$CrewContainer1/CrewInfo.text = lst[0].firstName + " " + lst[0].lastName + "\n" + lst[0].type + "\n cost: " + str(lst[0].cost)
-	$CrewContainer2/CrewInfo.text = lst[1].firstName + " " + lst[1].lastName + "\n" + lst[1].type + "\n cost: " + str(lst[1].cost)
-	$CrewContainer3/CrewInfo.text = lst[2].firstName + " " + lst[2].lastName + "\n" + lst[2].type + "\n cost: " + str(lst[2].cost)
-	$CrewContainer4/CrewInfo.text = lst[3].firstName + " " + lst[3].lastName + "\n" + lst[3].type + "\n cost: " + str(lst[3].cost)
-	$CrewContainer5/CrewInfo.text = lst[4].firstName + " " + lst[4].lastName + "\n" + lst[4].type + "\n cost: " + str(lst[4].cost)
-	$CrewContainer6/CrewInfo.text = lst[5].firstName + " " + lst[5].lastName + "\n" + lst[5].type + "\n cost: " + str(lst[5].cost)
-	$CrewContainer7/CrewInfo.text = lst[6].firstName + " " + lst[6].lastName + "\n" + lst[6].type + "\n cost: " + str(lst[6].cost)
-	$CrewContainer8/CrewInfo.text = lst[7].firstName + " " + lst[7].lastName + "\n" + lst[7].type + "\n cost: " + str(lst[7].cost)
-	$CrewContainer9/CrewInfo.text = lst[8].firstName + " " + lst[8].lastName + "\n" + lst[8].type + "\n cost: " + str(lst[8].cost)
+	
+	update_Crew()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -78,174 +70,49 @@ func update_Crew():
 	$CrewContainer8/CrewInfo.text = lst[7].firstName + " " + lst[7].lastName + "\n" + lst[7].type + "\n cost: " + str(lst[7].cost)
 	$CrewContainer9/CrewInfo.text = lst[8].firstName + " " + lst[8].lastName + "\n" + lst[8].type + "\n cost: " + str(lst[8].cost)
 
-func _on_Hire_pressed():
-	if (GameStats.coins < lst[0].cost || lst[0].hired):
+func add_Crewmate(index):
+	if (GameStats.coins < lst[index].cost || lst[index].hired):
 		return
 	else:
-		match lst[0].type:
+		match lst[index].type:
 			"hull specialist":
-				GameStats.health = GameStats.health * (1 + lst[0].bonus)
+				GameStats.health = GameStats.health * (1 + lst[index].bonus)
 			"weapons expert":
-				GameStats.attack = GameStats.attack * (1 + lst[0].bonus)
+				GameStats.attack = GameStats.attack * (1 + lst[index].bonus)
 			"booster engineer":
-				GameStats.speed = GameStats.speed * (1 + lst[0].bonus)
+				GameStats.speed = GameStats.speed * (1 + lst[index].bonus)
 		
-		GameStats.coins = GameStats.coins - lst[0].cost
-		lst[0].firstName = ""
-		lst[0].lastName = ""
-		lst[0].type = "Hired"
-		lst[0].hired = true
+		GameStats.coins = GameStats.coins - lst[index].cost
+		lst[index].firstName = ""
+		lst[index].lastName = ""
+		lst[index].type = "Hired"
+		lst[index].hired = true
 		update_Crew()
+		
+func _on_Hire1_pressed():
+	add_Crewmate(0)
 
 func _on_Hire2_pressed():
-	if (GameStats.coins < lst[1].cost || lst[1].hired):
-		return
-	else:
-		match lst[1].type:
-			"hull specialist":
-				GameStats.health = GameStats.health * (1 + lst[1].bonus)
-			"weapons expert":
-				GameStats.attack = GameStats.attack * (1 + lst[1].bonus)
-			"booster engineer":
-				GameStats.speed = GameStats.speed * (1 + lst[1].bonus)
-		
-		GameStats.coins = GameStats.coins - lst[1].cost
-		lst[1].firstName = ""
-		lst[1].lastName = ""
-		lst[1].type = "Hired"
-		lst[1].hired = true
-		update_Crew()
+	add_Crewmate(1)
 
 func _on_Hire3_pressed():
-	if (GameStats.coins < lst[2].cost || lst[2].hired):
-		return
-	else:
-		match lst[2].type:
-			"hull specialist":
-				GameStats.health = GameStats.health * (1 + lst[2].bonus)
-			"weapons expert":
-				GameStats.attack = GameStats.attack * (1 + lst[2].bonus)
-			"booster engineer":
-				GameStats.speed = GameStats.speed * (1 + lst[2].bonus)
-		
-		GameStats.coins = GameStats.coins - lst[2].cost
-		lst[2].firstName = ""
-		lst[2].lastName = ""
-		lst[2].type = "Hired"
-		lst[2].hired = true
-		update_Crew()
+	add_Crewmate(2)
 
 func _on_Hire4_pressed():
-	if (GameStats.coins < lst[3].cost || lst[3].hired):
-		return
-	else:
-		match lst[3].type:
-			"hull specialist":
-				GameStats.health = GameStats.health * (1 + lst[3].bonus)
-			"weapons expert":
-				GameStats.attack = GameStats.attack * (1 + lst[3].bonus)
-			"booster engineer":
-				GameStats.speed = GameStats.speed * (1 + lst[3].bonus)
-		
-		GameStats.coins = GameStats.coins - lst[3].cost
-		lst[3].firstName = ""
-		lst[3].lastName = ""
-		lst[3].type = "Hired"
-		lst[3].hired = true
-		update_Crew()
+	add_Crewmate(3)
 
 func _on_Hire5_pressed():
-	if (GameStats.coins < lst[4].cost || lst[4].hired):
-		return
-	else:
-		match lst[4].type:
-			"hull specialist":
-				GameStats.health = GameStats.health * (1 + lst[4].bonus)
-			"weapons expert":
-				GameStats.attack = GameStats.attack * (1 + lst[4].bonus)
-			"booster engineer":
-				GameStats.speed = GameStats.speed * (1 + lst[4].bonus)
-		
-		GameStats.coins = GameStats.coins - lst[4].cost
-		lst[4].firstName = ""
-		lst[4].lastName = ""
-		lst[4].type = "Hired"
-		lst[4].hired = true
-		update_Crew()
+	add_Crewmate(4)
 
 func _on_Hire6_pressed():
-	if (GameStats.coins < lst[5].cost || lst[5].hired):
-		return
-	else:
-		match lst[5].type:
-			"hull specialist":
-				GameStats.health = GameStats.health * (1 + lst[5].bonus)
-			"weapons expert":
-				GameStats.attack = GameStats.attack * (1 + lst[5].bonus)
-			"booster engineer":
-				GameStats.speed = GameStats.speed * (1 + lst[5].bonus)
-		
-		GameStats.coins = GameStats.coins - lst[5].cost
-		lst[5].firstName = ""
-		lst[5].lastName = ""
-		lst[5].type = "Hired"
-		lst[5].hired = true
-		update_Crew()
+	add_Crewmate(5)
 
 func _on_Hire7_pressed():
-	if (GameStats.coins < lst[6].cost || lst[6].hired):
-		return
-	else:
-		match lst[6].type:
-			"hull specialist":
-				GameStats.health = GameStats.health * (1 + lst[6].bonus)
-			"weapons expert":
-				GameStats.attack = GameStats.attack * (1 + lst[6].bonus)
-			"booster engineer":
-				GameStats.speed = GameStats.speed * (1 + lst[6].bonus)
-		
-		GameStats.coins = GameStats.coins - lst[6].cost
-		lst[6].firstName = ""
-		lst[6].lastName = ""
-		lst[6].type = "Hired"
-		lst[6].hired = true
-		update_Crew()
+	add_Crewmate(6)
 
 func _on_Hire8_pressed():
-	if (GameStats.coins < lst[7].cost || lst[7].hired):
-		return
-	else:
-		match lst[7].type:
-			"hull specialist":
-				GameStats.health = GameStats.health * (1 + lst[7].bonus)
-			"weapons expert":
-				GameStats.attack = GameStats.attack * (1 + lst[7].bonus)
-			"booster engineer":
-				GameStats.speed = GameStats.speed * (1 + lst[7].bonus)
-		
-		GameStats.coins = GameStats.coins - lst[7].cost
-		lst[7].firstName = ""
-		lst[7].lastName = ""
-		lst[7].type = "Hired"
-		lst[7].hired = true
-		update_Crew()
+	add_Crewmate(7)
 
 func _on_Hire9_pressed():
-	if (GameStats.coins < lst[8].cost || lst[8].hired):
-		return
-	else:
-		match lst[8].type:
-			"hull specialist":
-				GameStats.health = GameStats.health * (1 + lst[8].bonus)
-			"weapons expert":
-				GameStats.attack = GameStats.attack * (1 + lst[8].bonus)
-			"booster engineer":
-				GameStats.speed = GameStats.speed * (1 + lst[8].bonus)
-		
-		GameStats.coins = GameStats.coins - lst[8].cost
-		lst[8].firstName = ""
-		lst[8].lastName = ""
-		lst[8].type = "Hired"
-		lst[8].hired = true
-		update_Crew()
-		
+	add_Crewmate(8)
+
