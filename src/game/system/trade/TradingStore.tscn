@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://game/8bitfont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://game/system/trade/trading_store.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://game/system/trade/resources_menu.gd" type="Script" id=4]
 [ext_resource path="res://game/system/trade/fuel_menu.gd" type="Script" id=5]
 [ext_resource path="res://game/system/trade/UpgradesMenu.gd" type="Script" id=6]
+[ext_resource path="res://game/system/trade/CrewmatesMenu.gd" type="Script" id=7]
 
 [node name="TradeStore" type="Control"]
 anchor_right = 1.0
@@ -30,26 +31,32 @@ __meta__ = {
 }
 
 [node name="Resources" type="Button" parent="TopRow"]
-margin_left = 516.0
-margin_right = 594.0
+margin_left = 492.0
+margin_right = 570.0
 margin_bottom = 20.0
 text = "Resources"
 
 [node name="Fuel" type="Button" parent="TopRow"]
-margin_left = 598.0
-margin_right = 637.0
+margin_left = 574.0
+margin_right = 613.0
 margin_bottom = 20.0
 text = "Fuel"
 
 [node name="Upgrades" type="Button" parent="TopRow"]
-margin_left = 641.0
-margin_right = 713.0
+margin_left = 617.0
+margin_right = 689.0
 margin_bottom = 20.0
 text = "Upgrades"
 
+[node name="Crew" type="Button" parent="TopRow"]
+margin_left = 693.0
+margin_right = 736.0
+margin_bottom = 20.0
+text = "Crew"
+
 [node name="Close" type="Button" parent="TopRow"]
-margin_left = 717.0
-margin_right = 764.0
+margin_left = 740.0
+margin_right = 787.0
 margin_bottom = 20.0
 text = "Close"
 __meta__ = {
@@ -323,9 +330,249 @@ margin_bottom = 44.0
 custom_fonts/font = ExtResource( 1 )
 text = "Booster Upgrade 1"
 align = 1
+
+[node name="CrewmatesMenu" type="PopupMenu" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -579.0
+margin_top = -280.622
+margin_right = 579.0
+margin_bottom = 278.378
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CrewContainer1" type="VBoxContainer" parent="CrewmatesMenu"]
+margin_left = 15.0
+margin_top = 67.0
+margin_right = 385.0
+margin_bottom = 150.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CrewInfo" type="Label" parent="CrewmatesMenu/CrewContainer1"]
+margin_right = 370.0
+margin_bottom = 20.0
+custom_fonts/font = ExtResource( 1 )
+text = "UNAVAILABLE"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hire1" type="Button" parent="CrewmatesMenu/CrewContainer1"]
+margin_top = 24.0
+margin_right = 370.0
+margin_bottom = 44.0
+text = "Hire"
+
+[node name="CrewContainer2" type="VBoxContainer" parent="CrewmatesMenu"]
+margin_left = 394.0
+margin_top = 67.0
+margin_right = 764.0
+margin_bottom = 150.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CrewInfo" type="Label" parent="CrewmatesMenu/CrewContainer2"]
+margin_right = 370.0
+margin_bottom = 20.0
+custom_fonts/font = ExtResource( 1 )
+text = "UNAVAILABLE"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hire2" type="Button" parent="CrewmatesMenu/CrewContainer2"]
+margin_top = 24.0
+margin_right = 370.0
+margin_bottom = 44.0
+text = "Hire"
+
+[node name="CrewContainer3" type="VBoxContainer" parent="CrewmatesMenu"]
+margin_left = 773.0
+margin_top = 67.0
+margin_right = 1143.0
+margin_bottom = 150.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CrewInfo" type="Label" parent="CrewmatesMenu/CrewContainer3"]
+margin_right = 370.0
+margin_bottom = 20.0
+custom_fonts/font = ExtResource( 1 )
+text = "UNAVAILABLE"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hire3" type="Button" parent="CrewmatesMenu/CrewContainer3"]
+margin_top = 24.0
+margin_right = 370.0
+margin_bottom = 44.0
+text = "Hire"
+
+[node name="CrewContainer4" type="VBoxContainer" parent="CrewmatesMenu"]
+margin_left = 15.0
+margin_top = 236.0
+margin_right = 385.0
+margin_bottom = 319.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CrewInfo" type="Label" parent="CrewmatesMenu/CrewContainer4"]
+margin_right = 370.0
+margin_bottom = 20.0
+custom_fonts/font = ExtResource( 1 )
+text = "UNAVAILABLE"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hire4" type="Button" parent="CrewmatesMenu/CrewContainer4"]
+margin_top = 24.0
+margin_right = 370.0
+margin_bottom = 44.0
+text = "Hire"
+
+[node name="CrewContainer5" type="VBoxContainer" parent="CrewmatesMenu"]
+margin_left = 394.0
+margin_top = 236.0
+margin_right = 764.0
+margin_bottom = 319.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CrewInfo" type="Label" parent="CrewmatesMenu/CrewContainer5"]
+margin_right = 369.0
+margin_bottom = 20.0
+custom_fonts/font = ExtResource( 1 )
+text = "UNAVAILABLE"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hire5" type="Button" parent="CrewmatesMenu/CrewContainer5"]
+margin_top = 24.0
+margin_right = 369.0
+margin_bottom = 44.0
+text = "Hire"
+
+[node name="CrewContainer6" type="VBoxContainer" parent="CrewmatesMenu"]
+margin_left = 773.0
+margin_top = 236.0
+margin_right = 1143.0
+margin_bottom = 319.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CrewInfo" type="Label" parent="CrewmatesMenu/CrewContainer6"]
+margin_right = 369.0
+margin_bottom = 20.0
+custom_fonts/font = ExtResource( 1 )
+text = "UNAVAILABLE"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hire6" type="Button" parent="CrewmatesMenu/CrewContainer6"]
+margin_top = 24.0
+margin_right = 369.0
+margin_bottom = 44.0
+text = "Hire"
+
+[node name="CrewContainer7" type="VBoxContainer" parent="CrewmatesMenu"]
+margin_left = 15.0
+margin_top = 415.0
+margin_right = 385.0
+margin_bottom = 498.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CrewInfo" type="Label" parent="CrewmatesMenu/CrewContainer7"]
+margin_right = 370.0
+margin_bottom = 20.0
+custom_fonts/font = ExtResource( 1 )
+text = "UNAVAILABLE"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hire7" type="Button" parent="CrewmatesMenu/CrewContainer7"]
+margin_top = 24.0
+margin_right = 370.0
+margin_bottom = 44.0
+text = "Hire"
+
+[node name="CrewContainer8" type="VBoxContainer" parent="CrewmatesMenu"]
+margin_left = 394.0
+margin_top = 415.0
+margin_right = 764.0
+margin_bottom = 498.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CrewInfo" type="Label" parent="CrewmatesMenu/CrewContainer8"]
+margin_right = 369.0
+margin_bottom = 20.0
+custom_fonts/font = ExtResource( 1 )
+text = "UNAVAILABLE"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hire8" type="Button" parent="CrewmatesMenu/CrewContainer8"]
+margin_top = 24.0
+margin_right = 369.0
+margin_bottom = 44.0
+text = "Hire"
+
+[node name="CrewContainer9" type="VBoxContainer" parent="CrewmatesMenu"]
+margin_left = 773.0
+margin_top = 415.0
+margin_right = 1143.0
+margin_bottom = 498.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CrewInfo" type="Label" parent="CrewmatesMenu/CrewContainer9"]
+margin_right = 369.0
+margin_bottom = 20.0
+custom_fonts/font = ExtResource( 1 )
+text = "UNAVAILABLE"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hire9" type="Button" parent="CrewmatesMenu/CrewContainer9"]
+margin_top = 24.0
+margin_right = 369.0
+margin_bottom = 44.0
+text = "Hire"
 [connection signal="pressed" from="TopRow/Resources" to="." method="_on_Resources_pressed"]
 [connection signal="pressed" from="TopRow/Fuel" to="." method="_on_Fuel_pressed"]
 [connection signal="pressed" from="TopRow/Upgrades" to="." method="_on_Upgrades_pressed"]
+[connection signal="pressed" from="TopRow/Crew" to="." method="_on_Crew_pressed"]
 [connection signal="pressed" from="TopRow/Close" to="." method="_on_Close_pressed"]
 [connection signal="pressed" from="ResourcesMenu/IronContainer/TradeIronButton" to="ResourcesMenu" method="_on_TradeIronButton_pressed"]
 [connection signal="pressed" from="ResourcesMenu/SilverContainer/TradeSilverButton" to="ResourcesMenu" method="_on_TradeSilverButton_pressed"]
@@ -334,3 +581,12 @@ align = 1
 [connection signal="pressed" from="UpgradesMenu/WeaponContainer/WeaponUpgrade" to="UpgradesMenu" method="_on_WeaponUpgrade_pressed"]
 [connection signal="pressed" from="UpgradesMenu/HealthContainer/HealthUpgrade" to="UpgradesMenu" method="_on_HealthUpgrade_pressed"]
 [connection signal="pressed" from="UpgradesMenu/SpeedContainer/SpeedUpgrade" to="UpgradesMenu" method="_on_SpeedUpgrade_pressed"]
+[connection signal="pressed" from="CrewmatesMenu/CrewContainer1/Hire1" to="CrewmatesMenu" method="_on_Hire1_pressed"]
+[connection signal="pressed" from="CrewmatesMenu/CrewContainer2/Hire2" to="CrewmatesMenu" method="_on_Hire2_pressed"]
+[connection signal="pressed" from="CrewmatesMenu/CrewContainer3/Hire3" to="CrewmatesMenu" method="_on_Hire3_pressed"]
+[connection signal="pressed" from="CrewmatesMenu/CrewContainer4/Hire4" to="CrewmatesMenu" method="_on_Hire4_pressed"]
+[connection signal="pressed" from="CrewmatesMenu/CrewContainer5/Hire5" to="CrewmatesMenu" method="_on_Hire5_pressed"]
+[connection signal="pressed" from="CrewmatesMenu/CrewContainer6/Hire6" to="CrewmatesMenu" method="_on_Hire6_pressed"]
+[connection signal="pressed" from="CrewmatesMenu/CrewContainer7/Hire7" to="CrewmatesMenu" method="_on_Hire7_pressed"]
+[connection signal="pressed" from="CrewmatesMenu/CrewContainer8/Hire8" to="CrewmatesMenu" method="_on_Hire8_pressed"]
+[connection signal="pressed" from="CrewmatesMenu/CrewContainer9/Hire9" to="CrewmatesMenu" method="_on_Hire9_pressed"]

@@ -30,6 +30,12 @@ var speed1 = true
 var speed2 = true
 var speed3 = true
 
+var healthMultiplier = 1.00
+var damageMultiplier = 1.00
+var speedMultiplier = 1.00
+
+var available = {"earth": [], "blue": [], "pastel": [], "orange": [], "yellow": [], "magenta": []}
+
 var position = {
 	"x": 0,
 	"y": 0
@@ -71,3 +77,4 @@ func _process(delta):
 		set_error_message("Low health!!!")
 	if health <= 0:
 		SceneManager.game_over("loss")
+		
