@@ -1,10 +1,13 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://game/assets/backgrounds/alt.png" type="Texture" id=1]
 [ext_resource path="res://game/assets/earth.png" type="Texture" id=2]
 [ext_resource path="res://game/earth/earth.gd" type="Script" id=3]
 [ext_resource path="res://game/system/TradeStation.tscn" type="PackedScene" id=4]
 [ext_resource path="res://game/player/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://game/assets/backgrounds/Fog3.png" type="Texture" id=6]
+[ext_resource path="res://game/assets/backgrounds/Fog4.png" type="Texture" id=7]
+[ext_resource path="res://game/assets/backgrounds/Fog2.png" type="Texture" id=8]
 
 [sub_resource type="TileSet" id=1]
 0/name = "alt.png 0"
@@ -27,6 +30,7 @@ radius = 277.5
 
 [sub_resource type="TileSet" id=3]
 0/name = "Fog3.png 0"
+0/texture = ExtResource( 6 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 13, -9, 978, 355 )
@@ -40,6 +44,7 @@ radius = 277.5
 0/shapes = [  ]
 0/z_index = 0
 1/name = "Fog2.png 1"
+1/texture = ExtResource( 8 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 530, 215, 469, 445 )
@@ -53,6 +58,7 @@ radius = 277.5
 1/shapes = [  ]
 1/z_index = 0
 2/name = "Fog4.png 2"
+2/texture = ExtResource( 7 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 9, 351, 557, 586 )
