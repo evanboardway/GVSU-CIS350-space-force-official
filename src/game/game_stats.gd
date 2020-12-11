@@ -99,6 +99,7 @@ func _process(delta):
 	if health < 50:
 		set_error_message("Low health!!!")
 	if health <= 0:
+		health = 10
 		SceneManager.game_over("loss")
 	if fuel <= 0:
 		fuel = 10

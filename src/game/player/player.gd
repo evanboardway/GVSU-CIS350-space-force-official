@@ -32,8 +32,7 @@ func get_input():
 	if Input.is_action_pressed("ui_down"):
 		GameStats.speed -= 10
 		speed = GameStats.speed
-	if (Input.is_key_pressed(KEY_SPACE) && get_tree().current_scene.name != "TitleScreen"):
-		_shoot_laser()
+		
 	velocity = velocity.normalized() * speed
  
 
@@ -43,11 +42,14 @@ func _physics_process(delta):
 	rotation += rotation_dir * rotation_speed * delta
 	move_and_collide(velocity * delta)
 
-func _shoot_laser():
+func _input(event):
+	if event is InputEventMouseButton and get_tree().current_scene.name != "TitleScreen":
+		_shoot_laser(get_global_mouse_position())
+
+func _shoot_laser(to):
 	var system = get_node("/root/Game")
 	var laser = load("res://game/player/weapons/PlayerLasers.tscn").instance()
-	var destination = position
+	laser.to = to
 	laser.position = position
-	laser.rotation_degrees = rotation_degrees + 90
-	laser.playerVelocity = velocity
 	system.add_child(laser)
+	get_node("Pew").play()
