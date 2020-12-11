@@ -9,15 +9,14 @@ This document contains the functional and nonfunctional requirements for our gam
     2. The game shall display the users current statline.
 2. Gameplay
     1. The game shall randomly generate a series of planets for the player to explore. The game shall save the generated planet system map for the duration of playthrough.
-    2. The game shall randomly select a text-based encounter for the player when the player interacts with a planet.
-    3. The game shall allow the user to participate in combat.
-    4. The user shall be able to move their ship using keys on a keyboard.
-    5. The game shall end once all objectives on earth have been completed.
-    6. The game shall have enemy CPU's defending earth.
+    2. The game shall allow the user to participate in combat.
+    3. The user shall be able to move their ship using keys on a keyboard.
+    4. The game shall end once the earth health reaches 0.
+    5. The game shall have enemy CPU's defending earth.
 3. Game economy
-    1. The game shall have items for the player to buy with collected resources.
-    2. Items the player can buy shall scale in power to how much they cost in resources.
-    3. In game items shall actively change the stats of the player's ship.
+    1. The game shall have crewmates to hire by spending collected resources.
+    2. Crewmates the player can buy shall scale in power to how much they cost in resources.
+    3. In game crewmates shall actively change the stats of the player's ship.
     4. Players shall collect resources from planet interactions.
 4. Player stats
     1. The game shall contain an attack stat: a non-negative value that can be decreased and increased.
@@ -27,16 +26,14 @@ This document contains the functional and nonfunctional requirements for our gam
 # Non-Functional Requirements
 
 1. User Interaction
-    1. The game shall warn the player when they are approaching the Earth. The game shall alert the player if they do not have high enough stats to attempt their objective.
-    2. The game shall allow the player to choose from a series of options when having encounters on the planets. The player shall receive either resources or currency based on their choices.
+    1. The game shall allow the player to shoot the earth.
+    2. The game shall allow the player to go to planets as they choose and collect resources.
     3. The user shall be able to interact with trading posts to expend resources.
     4. The user shall be able to transfer the game to another OS with no conflicts. 
-    5. The user shall be able to choose between different treasure for different effects on their ship.
+    5. The user shall be able to choose between different crewmates for different effects on their ship.
 2. Recoverability
-    1. The game shall have a save function which will allow players to save their progress and resume their playthrough at a later time.
-    2. The user shall not be able to create false save files outside of the game.
-    3. Objects shall load data directly from json.
-    4. Save game shall store game objects in a backend with an API call.
+    1. Objects shall load data directly from json.
+    2. Save game shall store game objects in a backend with an API call.
 3. Restrictions
     1. The user shall not be allowed to go past certain points on the map.  
     2. The user shall not have access to the source code. 
