@@ -38,20 +38,19 @@ var speedMultiplier
 
 var available
 
-var position = {
-	"x": 0,
-	"y": 0
-}
-
 var errorMessage = ""
 
 var _earthHealthTimer
 
 func _ready():
-  healthMultiplier = 1.00
-  damageMultiplier = 1.00
-  speedMultiplier = 1.00
-  available = {"earth": [], "blue": [], "pastel": [], "orange": [], "yellow": [], "magenta": []}
+	position = {
+		"x": 0,
+		"y": 0
+	}
+	healthMultiplier = 1.00
+	damageMultiplier = 1.00
+	speedMultiplier = 1.00
+	available = {"earth": [], "blue": [], "pastel": [], "orange": [], "yellow": [], "magenta": []}
 	earthHealth = 10000
 	attack = 10
 	health = 100
