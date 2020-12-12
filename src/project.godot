@@ -22,6 +22,7 @@ run/main_scene="res://title-screen/TitleScreen.tscn"
 
 GameStats="*res://game/game_stats.gd"
 SceneManager="*res://game/scene_manager.gd"
+BackgroundMusic="*res://BackgroundMusic.tscn"
 
 [display]
 

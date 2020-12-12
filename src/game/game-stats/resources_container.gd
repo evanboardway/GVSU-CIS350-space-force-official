@@ -9,7 +9,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	$Iron.text = " Iron* " + str(GameStats.iron)
 	$Silver.text = " Silver* " + str(GameStats.silver)
 	$Gold.text = " Gold* " + str(GameStats.gold)

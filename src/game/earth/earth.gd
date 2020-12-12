@@ -1,17 +1,23 @@
 extends Node2D
 
-
+var timer: Timer
 var player
+var systemName: String
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	timer = Timer.new()
+	timer.wait_time = 20
+	timer.connect("timeout",self,"respawn_enemies") 
+	add_child(timer)
+	timer.start()
 	_add_enemies_to_system()
 
 
 func _add_enemies_to_system():
 	var enemy = load("res://game/player/Enemy.tscn")
 	var usedPositions = []
-	for i in range(0, 10):
+	for _i in range(0, 10):
 		var enemyInstance = enemy.instance()
 		var coordinate = _get_random_coordinates(usedPositions)
 		usedPositions.append(coordinate)
@@ -19,6 +25,7 @@ func _add_enemies_to_system():
 		enemyInstance.position.y = coordinate["y"]
 		enemyInstance.speed = 300
 		add_child(enemyInstance)
+		enemyInstance.add_to_group("earth_enemies")
 
 
 # returns a map of unique coordinates given a list of existing coordinates.
@@ -61,3 +68,19 @@ func _on_SafeZone_body_entered(body):
 func _on_SafeZone_body_exited(body):
 	if body.get_name() == "Player":
 		GameStats.canTeleport = false
+
+func respawn_enemies():
+	var enemy = load("res://game/player/Enemy.tscn")
+	var numEnemies = get_tree().get_nodes_in_group("earth_enemies").size()
+	if numEnemies < 10:
+		var usedPositions = []
+		for _i in range(0, 10 - numEnemies):
+			var enemyInstance = enemy.instance()
+			var coordinate = _get_random_coordinates(usedPositions)
+			usedPositions.append(coordinate)
+			enemyInstance.position.x = coordinate["x"]
+			enemyInstance.position.y = coordinate["y"]
+			enemyInstance.speed = 300
+			add_child(enemyInstance)
+			enemyInstance.add_to_group("earth_enemies")
+

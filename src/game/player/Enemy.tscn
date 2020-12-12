@@ -24,6 +24,26 @@ shape = SubResource( 1 )
 
 [node name="ShipCollision" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( -26.15, 33.2, -44.9, 31.45, -50.65, 24.2, -50.15, -6.3, -6.14999, -34.8, 0.350006, -36.8, 7.10001, -34.8, 49.85, -6.8, 51.35, 23.7, 45.85, 30.95, 17.6, 33.45, 8.60001, 33.95, 2.60001, 35.2, -5.14999, 35.95, -7.89999, 32.7 )
+
+[node name="HealthBar" type="HBoxContainer" parent="."]
+margin_left = -48.0
+margin_top = 41.5
+margin_right = -8.0
+margin_bottom = 81.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackBar" type="ColorRect" parent="HealthBar"]
+margin_bottom = 40.0
+
+[node name="FrontBar" type="ColorRect" parent="HealthBar/BackBar"]
+margin_right = 90.0
+margin_bottom = 5.0
+color = Color( 1, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="body_entered" from="Scope" to="." method="_on_Scope_body_entered"]
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_DetectionArea_body_entered"]
 [connection signal="body_exited" from="DetectionArea" to="." method="_on_DetectionArea_body_exited"]

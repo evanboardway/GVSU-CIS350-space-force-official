@@ -13,7 +13,7 @@ func _ready():
 	fuelLevel.margin_right = currentFuel * 220
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	$Health.text = "Health* " + str(GameStats.health)
 	$Attack.text = "Attack* " + str(GameStats.attack)
 	$Speed.text = "Speed* " + str(GameStats.speed)
