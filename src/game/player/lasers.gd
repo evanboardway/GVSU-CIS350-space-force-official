@@ -6,7 +6,7 @@ var velocity = Vector2()
 func _ready():
 	destination = Vector2(GameStats.position)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	velocity = position.direction_to(destination) * 500
 	velocity = move_and_slide(velocity)
 

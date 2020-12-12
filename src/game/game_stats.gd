@@ -107,11 +107,11 @@ func set_error_message(message: String):
 func _timeout():
 	errorMessage = ""
 
-func _process(delta):
+func _process(_delta):
 	if earthHealth <= 0:
 		SceneManager.game_over("win")
 	if health < 50:
-		set_error_message("Low health!!!")
+		set_error_message("LOW HEALTH")
 	if health <= 0:
 		health = 10
 		SceneManager.game_over("loss")
@@ -119,3 +119,12 @@ func _process(delta):
 		fuel = 10
 		SceneManager.game_over("loss")
 		
+
+
+func _on_Mute_pressed():
+	if BackgroundMusic.playing:
+		BackgroundMusic.stop()
+		BackgroundMusic.muted = true
+	else:
+		BackgroundMusic.play()
+		BackgroundMusic.muted = false

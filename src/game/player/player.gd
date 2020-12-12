@@ -43,7 +43,7 @@ func _physics_process(delta):
 	move_and_collide(velocity * delta)
 
 func _input(event):
-	if event is InputEventMouseButton and get_tree().current_scene.name != "TitleScreen":
+	if event is InputEventMouseButton and event.button_index == BUTTON_RIGHT and get_tree().current_scene.name != "TitleScreen":
 		_shoot_laser(get_global_mouse_position())
 
 func _shoot_laser(to):

@@ -19,7 +19,7 @@ func _process(delta):
 	else:
 		$Warning.text = ""
 		
-func timer(InDelta):
+func timer(_InDelta):
 	time += 1
 	if(GameStats.fuel / 100 > 10):
 		if(time < 40):
