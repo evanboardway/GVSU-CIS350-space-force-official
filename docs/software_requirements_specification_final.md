@@ -34,13 +34,13 @@ This document contains the functional and nonfunctional requirements for our gam
     3. The user shall be able to interact with trading posts to expend resources.
     4. The user shall be able to transfer the game to another OS with no conflicts. 
     5. The user shall be able to choose between different crewmates for different effects on their ship.
-2. Recoverability
-    1. Objects shall load data directly from json.
-    2. Save game shall store game objects in a backend with an API call.
-3. Restrictions
-    1. The user shall not be allowed to go past certain points on the map.  
-    2. The user shall not have access to the source code. 
-4. Difficulty
+2. Usability
+    1. The game shall tell the user the controls. 
+    2. The trade stations within the game shall have a simple menu to allow the user to easily access what they need. 
+    3. The game shall inform the user of the story of the game.
+    4. The game shall have a simple interface for traveling between systems.
+    5. The Earth scene within the game shall have a sound indicator letting the user know when they are approaching Earth.
+3. Difficulty
     1. Enemy speed in the “Earth” system shall be high enough to offer the player a relative challenge, but not too high as to cause frustration or excessive difficulty.
     2. The amount of resources available to a player shall be high enough so that the player can purchase crewmates on a consistent basis but not so high that the user is always able to purchase every crewmate they encounter.
     3. The game shall have automated intelligence enemies in all systems to give the player a relative challenge in beating the game, but not too high as to cause frustration or excessive difficulty.
