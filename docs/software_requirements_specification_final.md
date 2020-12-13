@@ -101,5 +101,7 @@ linked to> |
 (copy/paste the above table a minimum of 5 times)
 # Software Artifacts
 <Describe the purpose of this section>
-* [I am a link](to_some_file.pdf)
-
+* https://github.com/evanboardway/GVSU-CIS350-space-force-official/blob/master/artifacts/use_case_diagrams/ExtendedUseCaseDiagram.md
+* https://github.com/evanboardway/GVSU-CIS350-space-force-official/blob/master/artifacts/use_case_diagrams/Use%20Case%20Diagram.pdf
+* https://github.com/evanboardway/GVSU-CIS350-space-force-official/blob/master/artifacts/use_case_diagrams/Use_Case_Diagram_2%20(2).pdf
+* https://github.com/evanboardway/GVSU-CIS350-space-force-official/blob/master/artifacts/use_case_diagrams/Use_Case_Diagram_3.pdf
