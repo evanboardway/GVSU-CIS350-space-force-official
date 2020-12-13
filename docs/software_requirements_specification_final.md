@@ -86,7 +86,7 @@ requirement is linked to, or stating "TBD" if no test case has been linked.
     
 # Test Specification
 
-This section details the test cases, showing descriptions, actual and expected outputs, what requirement they're linked to and other information. 
+This section details the test cases including descriptions, steps to execute, input values, actual and expected outputs, whether they passed or failed and what requirement they're linked to. 
     
 ## Unit tests
 
