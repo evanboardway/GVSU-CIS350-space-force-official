@@ -26,13 +26,13 @@ func get_input():
 				GameStats.fuel = GameStats.fuel - 1
 		
 	# THIS IS FOR DEV PURPOSES. UP AND DOWN KEYS CHANGE SPEED
-	if Input.is_action_pressed("ui_up"):
-		GameStats.speed += 10
-		speed = GameStats.speed
-	if Input.is_action_pressed("ui_down"):
-		GameStats.speed -= 10
-		speed = GameStats.speed
-		
+	#if Input.is_action_pressed("ui_up"):
+	#	GameStats.speed += 10
+	#	speed = GameStats.speed
+	#if Input.is_action_pressed("ui_down"):
+	#	GameStats.speed -= 10
+	#	speed = GameStats.speed
+	#	
 	velocity = velocity.normalized() * speed
  
 
