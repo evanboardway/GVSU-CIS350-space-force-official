@@ -8,10 +8,9 @@ var bonuses = [.1, .1, .1, .1, .1, .1, .1, .1,.2, .2, .2, .2, .2, .2, .2, .2, .2
 var lst = []
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#Currently errors on second instance in same system
-	var curr = SceneManager.get_prev()
+	
+	var curr = SceneManager.previousScene
 	var info = GameStats.available[curr]
-	GameStats.coins += 10000
 	if not GameStats.available[curr]:
 			createCrew()
 	
@@ -34,7 +33,7 @@ class crew:
 
 func createCrew():
 	
-	var curr = SceneManager.get_prev()
+	var curr = SceneManager.previousScene
 	
 	randomize()
 	

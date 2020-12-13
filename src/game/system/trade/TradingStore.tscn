@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://game/8bitfont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://game/system/trade/trading_store.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://game/system/trade/fuel_menu.gd" type="Script" id=5]
 [ext_resource path="res://game/system/trade/UpgradesMenu.gd" type="Script" id=6]
 [ext_resource path="res://game/system/trade/CrewmatesMenu.gd" type="Script" id=7]
+[ext_resource path="res://game/system/trade/RepairMenu.gd" type="Script" id=8]
 
 [node name="TradeStore" type="Control"]
 anchor_right = 1.0
@@ -31,32 +32,38 @@ __meta__ = {
 }
 
 [node name="Resources" type="Button" parent="TopRow"]
-margin_left = 492.0
-margin_right = 570.0
+margin_left = 461.0
+margin_right = 539.0
 margin_bottom = 20.0
 text = "Resources"
 
 [node name="Fuel" type="Button" parent="TopRow"]
-margin_left = 574.0
-margin_right = 613.0
+margin_left = 543.0
+margin_right = 582.0
 margin_bottom = 20.0
 text = "Fuel"
 
+[node name="Repairs" type="Button" parent="TopRow"]
+margin_left = 586.0
+margin_right = 645.0
+margin_bottom = 20.0
+text = "Repairs"
+
 [node name="Upgrades" type="Button" parent="TopRow"]
-margin_left = 617.0
-margin_right = 689.0
+margin_left = 649.0
+margin_right = 721.0
 margin_bottom = 20.0
 text = "Upgrades"
 
 [node name="Crew" type="Button" parent="TopRow"]
-margin_left = 693.0
-margin_right = 736.0
+margin_left = 725.0
+margin_right = 768.0
 margin_bottom = 20.0
 text = "Crew"
 
 [node name="Close" type="Button" parent="TopRow"]
-margin_left = 740.0
-margin_right = 787.0
+margin_left = 772.0
+margin_right = 819.0
 margin_bottom = 20.0
 text = "Close"
 __meta__ = {
@@ -248,6 +255,70 @@ custom_fonts/font = ExtResource( 1 )
 text = "cost to refuel: 250 coins"
 align = 1
 valign = 1
+
+[node name="RepairMenu" type="PopupMenu" parent="."]
+margin_left = 61.0
+margin_top = 80.5
+margin_right = 1219.0
+margin_bottom = 639.5
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="RepairMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -60.0
+margin_top = -20.0
+margin_right = 72.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RefuelButton" type="Button" parent="RepairMenu/VBoxContainer2"]
+margin_right = 132.0
+margin_bottom = 26.0
+custom_fonts/font = ExtResource( 1 )
+text = "Repair"
+
+[node name="RepairCost" type="Label" parent="RepairMenu"]
+anchor_left = 0.5
+anchor_top = 0.407
+anchor_right = 0.5
+anchor_bottom = 0.407
+margin_left = -214.0
+margin_top = -13.013
+margin_right = 216.0
+margin_bottom = 6.98701
+custom_fonts/font = ExtResource( 1 )
+text = "cost to repair: 0 coins"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CurrentHealth" type="Label" parent="RepairMenu"]
+anchor_left = 0.5
+anchor_top = 0.407
+anchor_right = 0.5
+anchor_bottom = 0.407
+margin_left = -219.0
+margin_top = -69.013
+margin_right = 211.0
+margin_bottom = -26.013
+custom_fonts/font = ExtResource( 1 )
+text = "Current Health
+100 out of 100"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="UpgradesMenu" type="PopupMenu" parent="."]
 anchor_left = 0.5
@@ -571,6 +642,7 @@ margin_bottom = 44.0
 text = "Hire"
 [connection signal="pressed" from="TopRow/Resources" to="." method="_on_Resources_pressed"]
 [connection signal="pressed" from="TopRow/Fuel" to="." method="_on_Fuel_pressed"]
+[connection signal="pressed" from="TopRow/Repairs" to="." method="_on_Repairs_pressed"]
 [connection signal="pressed" from="TopRow/Upgrades" to="." method="_on_Upgrades_pressed"]
 [connection signal="pressed" from="TopRow/Crew" to="." method="_on_Crew_pressed"]
 [connection signal="pressed" from="TopRow/Close" to="." method="_on_Close_pressed"]
@@ -578,6 +650,7 @@ text = "Hire"
 [connection signal="pressed" from="ResourcesMenu/SilverContainer/TradeSilverButton" to="ResourcesMenu" method="_on_TradeSilverButton_pressed"]
 [connection signal="pressed" from="ResourcesMenu/GoldContainer/TradeGoldButton" to="ResourcesMenu" method="_on_TradeGoldButton_pressed"]
 [connection signal="pressed" from="FuelMenu/VBoxContainer/RefuelButton" to="FuelMenu" method="_on_RefuelButton_pressed"]
+[connection signal="pressed" from="RepairMenu/VBoxContainer2/RefuelButton" to="RepairMenu" method="_on_RefuelButton_pressed"]
 [connection signal="pressed" from="UpgradesMenu/WeaponContainer/WeaponUpgrade" to="UpgradesMenu" method="_on_WeaponUpgrade_pressed"]
 [connection signal="pressed" from="UpgradesMenu/HealthContainer/HealthUpgrade" to="UpgradesMenu" method="_on_HealthUpgrade_pressed"]
 [connection signal="pressed" from="UpgradesMenu/SpeedContainer/SpeedUpgrade" to="UpgradesMenu" method="_on_SpeedUpgrade_pressed"]

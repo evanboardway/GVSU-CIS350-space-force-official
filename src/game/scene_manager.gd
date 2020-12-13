@@ -62,6 +62,3 @@ func previous_scene():
 func game_over(status):
 		gameStatus = status
 		get_tree().change_scene("res://game/game-stats/GameOver.tscn")
-		
-func get_prev():
-	return previousScene
