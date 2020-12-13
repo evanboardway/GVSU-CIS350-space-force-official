@@ -1,6 +1,8 @@
 # Overview
 
-This document contains the functional and nonfunctional requirements for our game, Space Pirates.
+This document contains information about our game, Space Pirates. We've included a list of functional and non-functional requirements, 
+detailing the specifics of the requirement and linking test cases to them. We've also included a list of test cases, detailing the 
+specifics of each case and what they test. After our test cases is a list of our software artifacts.
 
 # Software Requirements
 
