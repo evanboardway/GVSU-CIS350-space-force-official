@@ -23,6 +23,9 @@ func _ready():
 		"magenta": load("res://game/system/System.tscn").instance(),
 		"earth": earth
 	}
+	
+	for system in systems:
+		systems[system].systemName = system
 
 func change_scene(location):
 	match location:
@@ -51,6 +54,7 @@ func change_scene(location):
 func set_scene(node_to_add):
 	var root = get_node("/root/Game")
 	for node in root.get_children():
+		print(node)
 		root.remove_child(node)
 	root.add_child(playerStats)
 	root.add_child(node_to_add)

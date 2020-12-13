@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+var health: float = 500
 var destination
 var speed: int
 var moveDirection
@@ -10,7 +11,10 @@ var detectedPlayer = false
 func _ready():
 	destination = _get_random_destination()
 
-func _physics_process(delta):
+func _physics_process(_delta):
+	if health < 0:
+		queue_free()
+	$HealthBar/BackBar/FrontBar.margin_right = (health/500) * 100
 	velocity = position.direction_to(destination) * speed
 	moveDirection = rad2deg(destination.angle_to_point(position))
 	rotation_degrees = moveDirection + 90

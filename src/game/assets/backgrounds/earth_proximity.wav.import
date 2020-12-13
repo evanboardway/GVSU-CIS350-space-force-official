@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/earth_proximity.wav-7d145a8a204d90b8806f2535cb88a8da.sample"
+
+[deps]
+
+source_file="res://game/assets/backgrounds/earth_proximity.wav"
+dest_files=[ "res://.import/earth_proximity.wav-7d145a8a204d90b8806f2535cb88a8da.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
