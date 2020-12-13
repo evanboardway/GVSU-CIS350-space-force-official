@@ -37,6 +37,12 @@ func get_input():
  
 
 func _physics_process(delta):
+	if velocity.is_equal_approx(Vector2(0,0)):
+		$AnimationPlayer.stop()
+		$Flame.visible = false
+	else:
+		$AnimationPlayer.play("Flame")
+		$Flame.visible = true
 	GameStats.position = position
 	get_input()
 	rotation += rotation_dir * rotation_speed * delta

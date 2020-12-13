@@ -45,5 +45,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="body_entered" from="Scope" to="." method="_on_Scope_body_entered"]
+[connection signal="body_exited" from="Scope" to="." method="_on_Scope_body_exited"]
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_DetectionArea_body_entered"]
 [connection signal="body_exited" from="DetectionArea" to="." method="_on_DetectionArea_body_exited"]

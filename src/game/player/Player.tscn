@@ -1,8 +1,27 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://game/assets/player_ship.png" type="Texture" id=1]
 [ext_resource path="res://game/player/player.gd" type="Script" id=2]
 [ext_resource path="res://game/assets/explosion/pew.wav" type="AudioStream" id=3]
+[ext_resource path="res://game/assets/sprites/flame.png" type="Texture" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Flame"
+length = 0.25
+loop = true
+step = 0.025
+tracks/0/type = "value"
+tracks/0/path = NodePath("Flame:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.025, 0.05, 0.075, 0.1, 0.125, 0.15, 0.175, 0.2, 0.225 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 4, 3, 2, 1 ]
+}
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -21,3 +40,14 @@ current = true
 [node name="Pew" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
 volume_db = -7.123
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Flame = SubResource( 1 )
+
+[node name="Flame" type="Sprite" parent="."]
+position = Vector2( -40.6819, 3.05693 )
+rotation = 4.71239
+scale = Vector2( 0.352805, 0.352805 )
+texture = ExtResource( 4 )
+vframes = 4
+hframes = 8

@@ -87,5 +87,4 @@ func respawn_enemies():
 			enemyInstance.speed = 300
 			add_child(enemyInstance)
 			enemyInstance.add_to_group(systemName + "_enemies")
-	print(str(numEnemies) + systemName)
 
