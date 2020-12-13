@@ -100,7 +100,7 @@ linked to> |
 ## System tests
 (copy/paste the above table a minimum of 5 times)
 # Software Artifacts
-<Describe the purpose of this section>
+A link to each software artifact developed throughout the term.
     
 * https://github.com/evanboardway/GVSU-CIS350-space-force-official/blob/master/artifacts/use_case_diagrams/ExtendedUseCaseDiagram.md
     
