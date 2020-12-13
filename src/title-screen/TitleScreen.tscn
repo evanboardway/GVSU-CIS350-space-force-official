@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://title-screen/title_screen.gd" type="Script" id=1]
 [ext_resource path="res://title-screen/space-pirates.png" type="Texture" id=2]
@@ -22,6 +22,8 @@ b = Vector2( -0.53595, 1240.77 )
 [sub_resource type="SegmentShape2D" id=5]
 a = Vector2( -524.87, 9.85693 )
 b = Vector2( 1584.75, 9.85693 )
+
+[sub_resource type="CircleShape2D" id=6]
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
@@ -107,19 +109,31 @@ custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color_shadow = Color( 0.168627, 0.0431373, 0.898039, 1 )
 text = "#credits#
 
-head engineer
+project director
+voice actor
 *Evan Boardway*
 
-game design
+lead engineer
 *Max foreback*
 
-user interface
+systems analyist
 *Ryan kinahan*
 
 public relations
 *wyatt davis*
 
-story design
+creative director
 *abbey diller*"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2( 112, 98 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( -562, 802 )
+shape = SubResource( 6 )
 [connection signal="body_entered" from="StartLabel" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D2_body_entered"]

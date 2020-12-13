@@ -59,3 +59,6 @@ func _shoot_laser(to):
 	laser.position = position
 	system.add_child(laser)
 	get_node("Pew").play()
+
+
+
