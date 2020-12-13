@@ -4,7 +4,9 @@ This document contains the functional and nonfunctional requirements for our gam
 
 # Software Requirements
 
-<Describe the structure of this section>
+Our software requirements are listed in multiple sections. These include an ID section detailing their number and whether they are functional
+or non-functional, a requirements section showing the specifics of the requirement, and a test case section telling what test case the 
+requirement is linked to, or stating "TBD" if no test case has been linked.
 
 ## Functional Requirements
 
