@@ -6,6 +6,7 @@ var systemName: String
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$EarthBody/EarfAnimationPlayer.play("EarthRotate")
 	timer = Timer.new()
 	timer.wait_time = 20
 	timer.connect("timeout",self,"respawn_enemies") 
