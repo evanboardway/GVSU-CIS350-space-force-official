@@ -86,10 +86,9 @@ requirement is linked to, or stating "TBD" if no test case has been linked.
     
 # Test Specification
 
-<Description of what this section is>
+This section details the test cases, showing descriptions, actual and expected outputs, what requirement they're linked to and other information. 
     
 ## Unit tests
-(copy/paste the below table a minimum of 10 times)
 
 | ID | Description | Steps | Input Values | Expected Output | Actual Output| Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------:| :----------: | :----------: | :----------: |
