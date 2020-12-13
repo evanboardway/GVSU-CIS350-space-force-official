@@ -5,6 +5,7 @@ var attack: int
 var health: int
 var speed: int
 var fuel: float
+var damageTaken: int
 
 var iron: int
 var silver: int
@@ -54,6 +55,7 @@ func _ready():
 	earthHealth = 10000
 	attack = 10
 	health = 100
+	damageTaken = 0
 	speed = 300
 	fuel = 10000
 	iron = 0
@@ -106,14 +108,17 @@ func set_error_message(message: String):
 
 func _timeout():
 	errorMessage = ""
+	
+func _health_percent():
+	return float(health - damageTaken)/health
 
 func _process(_delta):
 	if earthHealth <= 0:
 		SceneManager.game_over("win")
-	if health < 50:
-		set_error_message("LOW HEALTH")
-	if health <= 0:
-		health = 10
+	if _health_percent() <= .5:
+		set_error_message("Low health!!!")
+	if health == damageTaken:
+
 		SceneManager.game_over("loss")
 	if fuel <= 0:
 		fuel = 10
