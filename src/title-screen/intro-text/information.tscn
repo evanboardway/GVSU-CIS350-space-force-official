@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://title-screen/intro-text/information.gd" type="Script" id=1]
+[ext_resource path="res://title-screen/nasalization-rg.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+draw_center = false
+
+[sub_resource type="DynamicFont" id=2]
+size = 17
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 41
+font_data = ExtResource( 2 )
+
+[node name="Panel" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 33.0
+margin_top = 31.0
+margin_right = 1250.0
+margin_bottom = 620.0
+custom_fonts/normal_font = SubResource( 2 )
+meta_underlined = false
+text = "	Use the WAD keys to move and navigate the vastness of space. Whenever you move or jump star systems, you'll consume fuel. 
+Be careful not to run out, there is nobody to help you if you become stranded!
+
+	Since you were just thrown out of the Earth, you'll begin in the earth system. Warp to other systems using a trade station and travel planet-side to gather resources - iron, silver, and gold are in high demand.
+
+	You can trade resources you mine at trade stations for coin. Coins will be used to maintain and upgrade your ship - you'll have that hunk of junk in fighting shape in no time. A little extra coin and you may find yourself with some hired help - fellow pirates and unsavory folks willing to help you knock the Earth down a peg. Be weary, the more skilled the pirate, the more coin they'll demand.
+
+	Your ship comes equipped with guided missiles that you can fire by right-clicking. The missiles travel to the coordinates you designate, detonating if they hit a surface.
+
+	Your onboard navigation will help you keep your bearings. Whenever you enter a system,your nav will designate the systems
+ trade station as (0,0), and will display your current coordinates. Because you originated from the Earth, when inside the earth system the Earth itself will belocated at (0,0).
+
+	Be wary as you travel, the Space Force monitors many of the systems near earth - you're a notorious criminal now, so they'll attack on sight. The Earth System itself is teeming with patrols. You'll have to get stronger if you want to get your revenge...
+	"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 893.983
+margin_top = 636.142
+margin_right = 1261.98
+margin_bottom = 712.142
+custom_fonts/font = SubResource( 3 )
+text = "PRESS ENTER..."
+
+[node name="ColorRect" type="ColorRect" parent="."]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.054902, 0.0509804, 0.184314, 1 )
