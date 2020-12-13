@@ -106,10 +106,10 @@ linked to> |
 # Software Artifacts
 A link to each software artifact developed throughout the term.
     
-* https://github.com/evanboardway/GVSU-CIS350-space-force-official/blob/master/artifacts/use_case_diagrams/ExtendedUseCaseDiagram.md
+* [Extended Use Case Diagram](https://github.com/evanboardway/GVSU-CIS350-space-force-official/blob/master/artifacts/use_case_diagrams/ExtendedUseCaseDiagram.md)
     
-* https://github.com/evanboardway/GVSU-CIS350-space-force-official/blob/master/artifacts/use_case_diagrams/Use%20Case%20Diagram.pdf
+* [Use Case Diagram 1](https://github.com/evanboardway/GVSU-CIS350-space-force-official/blob/master/artifacts/use_case_diagrams/Use%20Case%20Diagram.pdf)
     
-* https://github.com/evanboardway/GVSU-CIS350-space-force-official/blob/master/artifacts/use_case_diagrams/Use_Case_Diagram_2%20(2).pdf
+* [Use Case Diagram 2](https://github.com/evanboardway/GVSU-CIS350-space-force-official/blob/master/artifacts/use_case_diagrams/Use_Case_Diagram_2%20(2).pdf)
     
-* https://github.com/evanboardway/GVSU-CIS350-space-force-official/blob/master/artifacts/use_case_diagrams/Use_Case_Diagram_3.pdf
+* [Use Case Diagram 3](https://github.com/evanboardway/GVSU-CIS350-space-force-official/blob/master/artifacts/use_case_diagrams/Use_Case_Diagram_3.pdf)
