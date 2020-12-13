@@ -54,9 +54,9 @@ func change_scene(location):
 func set_scene(node_to_add):
 	var root = get_node("/root/Game")
 	for node in root.get_children():
-		root.remove_child(node)
-	root.add_child(playerStats)
-	root.add_child(node_to_add)
+		root.call_deferred("remove_child", node)
+	root.call_deferred("add_child", playerStats)
+	root.call_deferred("add_child", node_to_add)
 
 # previous scene should only be a referene to the key in the systems dict
 func previous_scene():
