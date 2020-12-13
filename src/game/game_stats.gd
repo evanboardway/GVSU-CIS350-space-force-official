@@ -117,8 +117,9 @@ func _process(_delta):
 		SceneManager.game_over("win")
 	if _health_percent() <= .5:
 		set_error_message("Low health!!!")
-	if health == damageTaken:
-
+	if health <= damageTaken:
+		health = 10
+		damageTaken = 0
 		SceneManager.game_over("loss")
 	if fuel <= 0:
 		fuel = 10
