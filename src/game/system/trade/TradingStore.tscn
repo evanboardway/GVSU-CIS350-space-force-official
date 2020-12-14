@@ -106,9 +106,9 @@ margin_top = 73.0
 margin_right = 142.0
 margin_bottom = 139.0
 custom_fonts/font = ExtResource( 1 )
-text = "30 Iron
+text = "25 Iron
 x
-5 coin"
+50 coin"
 align = 1
 valign = 3
 autowrap = true
@@ -139,9 +139,9 @@ margin_top = 27.0
 margin_right = 150.0
 margin_bottom = 93.0
 custom_fonts/font = ExtResource( 1 )
-text = "15 Silver
+text = "20 Silver
 x
-30 Coin"
+100 Coin"
 align = 1
 
 [node name="TradeSilverButton" type="Button" parent="ResourcesMenu/SilverContainer"]

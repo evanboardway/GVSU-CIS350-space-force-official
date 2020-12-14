@@ -2,16 +2,16 @@ extends PopupMenu
 
 
 func _on_TradeIronButton_pressed():
-	if GameStats.iron >= 30:
-		GameStats.iron -= 30
-		GameStats.coins += 5
+	if GameStats.iron >= 25:
+		GameStats.iron -= 25
+		GameStats.coins += 50
 		
 
 
 func _on_TradeSilverButton_pressed():
-	if GameStats.silver >= 15:
-		GameStats.silver -= 15
-		GameStats.coins += 30
+	if GameStats.silver >= 20:
+		GameStats.silver -= 20
+		GameStats.coins += 100
 
 
 func _on_TradeGoldButton_pressed():
