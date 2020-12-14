@@ -104,13 +104,13 @@ shape = SubResource( 5 )
 margin_left = 382.0
 margin_top = 918.0
 margin_right = 743.0
-margin_bottom = 1283.0
+margin_bottom = 1306.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color_shadow = Color( 0.168627, 0.0431373, 0.898039, 1 )
 text = "#credits#
 
 project director
-voice actor
+sound design
 *Evan Boardway*
 
 lead engineer
@@ -122,7 +122,8 @@ systems analyist
 public relations
 *wyatt davis*
 
-creative director
+pixel artist
+story design
 *abbey diller*"
 align = 1
 __meta__ = {
