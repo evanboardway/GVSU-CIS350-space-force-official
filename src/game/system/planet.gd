@@ -1,14 +1,5 @@
 extends StaticBody2D
 
-#var textures = [
-#	load("res://game/assets/planets/generic.png"),
-#	load("res://game/assets/planets/magenta.png"),
-#	load("res://game/assets/planets/marble.png"),
-#	load("res://game/assets/planets/orange.png"),
-#	load("res://game/assets/planets/purple.png"),
-#	load("res://game/assets/planets/red.png"),
-#	load("res://game/assets/planets/tan.png")
-#	]
 
 var textures = [
 	load("res://game/assets/planets/v2/Baren.png"),
@@ -35,6 +26,10 @@ var timer
 
 func _ready():
 	var rand = RandomNumberGenerator.new()
+	timer = Timer.new()
+	timer.wait_time = 200
+	timer.connect("timeout",self,"reset_touched") 
+	add_child(timer)
 	
 	#randomly select planet image
 	rand.randomize()
@@ -45,11 +40,6 @@ func _ready():
 func _on_Area2D_body_entered(body):
 	if body.get_name() == "Player" and touched == false:
 		touched = true
-		
-		timer = Timer.new()
-		timer.wait_time = 300
-		timer.connect("timeout",self,"reset_touched") 
-		add_child(timer)
 		timer.start()
 		
 		var rand = RandomNumberGenerator.new()

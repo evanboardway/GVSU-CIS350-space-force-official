@@ -84,7 +84,7 @@ func respawn_enemies():
 			usedPositions.append(coordinate)
 			enemyInstance.position.x = coordinate["x"]
 			enemyInstance.position.y = coordinate["y"]
-			enemyInstance.speed = 300
+			enemyInstance.speed = 200
 			add_child(enemyInstance)
 			enemyInstance.add_to_group(systemName + "_enemies")
 

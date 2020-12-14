@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://game/8bitfont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://game/system/trade/trading_store.gd" type="Script" id=2]
-[ext_resource path="res://game/assets/backgrounds/black.png" type="Texture" id=3]
 [ext_resource path="res://game/system/trade/resources_menu.gd" type="Script" id=4]
 [ext_resource path="res://game/system/trade/fuel_menu.gd" type="Script" id=5]
 [ext_resource path="res://game/system/trade/UpgradesMenu.gd" type="Script" id=6]
@@ -17,10 +16,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Background" type="Sprite" parent="."]
-position = Vector2( 638.921, 359.711 )
-scale = Vector2( 0.853632, 0.479903 )
-texture = ExtResource( 3 )
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.196078, 0.137255, 0.137255, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TopRow" type="HBoxContainer" parent="."]
 anchor_right = 1.0
@@ -257,10 +259,14 @@ align = 1
 valign = 1
 
 [node name="RepairMenu" type="PopupMenu" parent="."]
-margin_left = 61.0
-margin_top = 80.5
-margin_right = 1219.0
-margin_bottom = 639.5
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -579.0
+margin_top = -279.5
+margin_right = 579.0
+margin_bottom = 279.5
 script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
