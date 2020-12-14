@@ -12,7 +12,7 @@ var silver: int
 var gold: int 
 var coins: int
 
-var earthHealth: int
+var earthHealth: float
 
 var canTeleport = false
 

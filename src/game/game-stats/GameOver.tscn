@@ -3,35 +3,18 @@
 [ext_resource path="res://game/8bitfont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://game/game-stats/game_over.gd" type="Script" id=2]
 
-[node name="GameOver" type="Node2D"]
-script = ExtResource( 2 )
-
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="GameOver" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -1.0
-margin_top = 1.0
-margin_right = 1279.0
-margin_bottom = 721.0
-color = Color( 0.0352941, 0.219608, 0.0156863, 1 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="StatusText" type="Label" parent="ColorRect"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -304.5
-margin_top = -42.5
-margin_right = 0.5
-margin_bottom = 0.5
-rect_scale = Vector2( 2, 2 )
-custom_fonts/font = ExtResource( 1 )
-text = "You done went and lost BOI"
-align = 1
-autowrap = true
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0352941, 0.219608, 0.0156863, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -41,11 +24,28 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = 563.0
-margin_top = 677.0
-margin_right = 711.0
-margin_bottom = 697.0
+margin_left = -74.0
+margin_top = -20.0
+margin_right = 74.0
 text = "Return to title screen"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatusText" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -302.407
+margin_top = -42.7133
+margin_right = 2.59338
+margin_bottom = 0.286743
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = ExtResource( 1 )
+text = "You done went and lost BOI"
+align = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

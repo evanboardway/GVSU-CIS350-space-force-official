@@ -17,17 +17,17 @@
 [ext_resource path="res://game/game-stats/location_position_stats.gd" type="Script" id=16]
 [ext_resource path="res://game/game-stats/earth_health_container.gd" type="Script" id=17]
 
-[sub_resource type="StyleBoxFlat" id=2]
-
 [sub_resource type="StyleBoxFlat" id=1]
 
+[sub_resource type="StyleBoxFlat" id=2]
+
 [sub_resource type="StyleBoxFlat" id=3]
+
+[sub_resource type="StyleBoxFlat" id=4]
 
 [sub_resource type="StyleBoxFlat" id=5]
 
 [sub_resource type="StyleBoxFlat" id=6]
-
-[sub_resource type="StyleBoxFlat" id=4]
 
 [node name="PlayerStats" type="Control"]
 anchor_right = 1.0
@@ -202,7 +202,7 @@ margin_top = 82.0
 margin_right = 652.0
 margin_bottom = 185.0
 focus_mode = 0
-custom_styles/pressed = SubResource( 2 )
+custom_styles/pressed = SubResource( 1 )
 enabled_focus_mode = 0
 icon = ExtResource( 10 )
 flat = true
@@ -221,7 +221,7 @@ margin_top = -109.5
 margin_right = -32.0
 margin_bottom = 110.5
 focus_mode = 0
-custom_styles/pressed = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
 enabled_focus_mode = 0
 icon = ExtResource( 5 )
 flat = true
@@ -251,7 +251,7 @@ margin_top = 194.0
 margin_right = 436.0
 margin_bottom = 332.0
 focus_mode = 0
-custom_styles/pressed = SubResource( 5 )
+custom_styles/pressed = SubResource( 4 )
 enabled_focus_mode = 0
 icon = ExtResource( 9 )
 flat = true
@@ -266,7 +266,7 @@ margin_top = 60.0
 margin_right = 236.0
 margin_bottom = 172.0
 focus_mode = 0
-custom_styles/pressed = SubResource( 6 )
+custom_styles/pressed = SubResource( 5 )
 enabled_focus_mode = 0
 icon = ExtResource( 6 )
 flat = true
@@ -281,7 +281,7 @@ margin_top = 286.0
 margin_right = 757.0
 margin_bottom = 474.0
 focus_mode = 0
-custom_styles/pressed = SubResource( 4 )
+custom_styles/pressed = SubResource( 6 )
 enabled_focus_mode = 0
 icon = ExtResource( 7 )
 flat = true
