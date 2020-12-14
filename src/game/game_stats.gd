@@ -102,7 +102,7 @@ func set_error_message(message: String):
 	errorMessage = message
 	var timer = Timer.new()
 	timer.connect("timeout",self,"_timeout") 
-	timer.wait_time = 5
+	timer.wait_time = 10
 	add_child(timer)
 	timer.start()
 

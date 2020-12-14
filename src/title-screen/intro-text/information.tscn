@@ -24,10 +24,14 @@ __meta__ = {
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 33.0
-margin_top = 31.0
-margin_right = 1250.0
-margin_bottom = 620.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -608.5
+margin_top = -294.5
+margin_right = 608.5
+margin_bottom = 294.5
 custom_fonts/normal_font = SubResource( 2 )
 meta_underlined = false
 text = "	Use the WAD keys to move and navigate the vastness of space. Whenever you move or jump star systems, you'll consume fuel. 
@@ -46,10 +50,12 @@ Be careful not to run out, there is nobody to help you if you become stranded!
 	"
 
 [node name="Label" type="Label" parent="."]
-margin_left = 893.983
-margin_top = 636.142
-margin_right = 1261.98
-margin_bottom = 712.142
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -367.997
+margin_top = -76.0
 custom_fonts/font = SubResource( 3 )
 text = "PRESS ENTER..."
 
