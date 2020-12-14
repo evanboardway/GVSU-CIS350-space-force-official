@@ -10,7 +10,7 @@ func _ready():
 
 
 func _cost_to_repair():
-	costToRepair = GameStats.damageTaken * 5
+	costToRepair = GameStats.damageTaken * 2
 	
 func _update_cost():
 	$RepairCost.text = "Cost to repair " + str(costToRepair) + " coins"
