@@ -17,14 +17,14 @@ requirement is linked to, or stating "TBD" if no test case has been linked.
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
 | FR1 | The game shall display an interface menu when pressing the designated menu key. The menu will display player inventory and current objective. | TBD |
-| FR2 | The game shall display the users current statline. | TBD |
+| FR2 | The game shall display the users current health, speed, fuel, and other base stats on the screen in the font we have provided. | TBD |
     
 ### Gameplay
 
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
 | FR3 | The game shall randomly generate a series of planets for the player to explore. The game shall save the generated planet system map for the duration of playthrough.| TBD |
-| FR4 | The game shall allow the user to participate in combat. | TBD |
+| FR4 | The game shall allow the user to shoot at and damage enemy ships, and the enemy ships shall be able to shoot back and damage the player. | TBD |
 | FR5 | The game shall end once the Earth health reaches 0. | TBD |
 | FR6 | The game shall have enemy CPU's defending earth. | TBD |
 | FR7 | The user shall be able to move their ship using keys on a keyboard. | TBD |
@@ -57,10 +57,10 @@ requirement is linked to, or stating "TBD" if no test case has been linked.
 
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
-| NFR1 | The game shall allow the player to shoot the earth. | TBD |
+| NFR1 | The game shall allow the player to attack the earth. | TBD |
 | NFR2 | The game shall allow the player to go to planets as they choose and collect resources. | TBD |
 | NFR3 | The user shall be able to interact with trading posts to expend resources.| TBD |
-| NFR4 | The user shall be able to transfer the game to another OS with no conflicts.  | TBD |
+| NFR4 | The user shall be playable in an internet browser.  | TBD |
 | NFR5 | The user shall be able to choose between different crewmates for different effects on their ship. | TBD |
 
 
