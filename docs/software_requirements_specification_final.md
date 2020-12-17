@@ -68,7 +68,7 @@ requirement is linked to, or stating "TBD" if no test case has been linked.
 
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
-| NFR6 | The game shall tell the user the controls.. | TBD |
+| NFR6 | The game shall tell the user the controls. | TBD |
 | NFR7 | The trade stations within the game shall have a simple menu to allow the user to easily access what they need. | TBD |
 | NFR8 | The game shall inform the user of the story of the game.| TBD |
 | NFR9 | The game shall have a simple interface for traveling between systems.  | TBD |
@@ -100,18 +100,18 @@ This section details the test cases including descriptions, steps to execute, in
 | TC6 | Attack is initialized to 10 | Start the game | N/A | Attack variable is set to 10 | Attack was set to 10 | Pass | FR14 
 | TC7 | Speed is initialized to 300 | Start the game | N/A | Speed variable is set to 300 | Speed was set to 300 | Pass | FR17
 | TC8 | Planet creates a random number of resources (Iron, Silver, Gold) upon initialization | Run the game | N/A | Planet resource variables are set | Planet resources are set | Pass | FR13 
-| TC9 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> 
-| TC10 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> 
+| TC9 | Information screen is displayed to user | Enter the game through the title screen and skip the introduction screen | WAD and Enter keys | Information screen is displayed | Information screen is displayed | pass | NFR6
+| TC10 | Introduction Screen is displayed to user | Enter the game through the title screen | WAD keys | Introduction screen is displayed | Introduction screen is displayed | pass | NFR8 
     
 ## Integration tests
 
 | ID | Description | Steps | Input Values | Expected Output | Actual Output| Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------:| :----------: | :----------: | :----------: |
 | TC11 | A player laser reduces the health of an enemy ship | Right click an enemy | Right click the mouse | Enemy health decreases | Enemy health decreased | Pass | FR5 |
-| TC12 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> 
-| TC13 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> 
-| TC14 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> 
-| TC15 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> 
+| TC12 | Crewmates change the stats of the player's ship | Enter trade station and purchase crewmate | Click left mouse button (to enter trade station, see crewmates, and purchase crewmates) | A stat is multiplied by some amount | A stat is multiplied by some amount | pass | FR11
+| TC13 | Player can interact with trade stations | Fly to trade station, enter the trade station | WAD keys, Left mouse button | Trade station menu is opened | Trade station menu is opened | pass | NFR3 
+| TC14 | Player can damage the Earth | Right click the earth | Right mouse button | Earth health is lowered | Earth health is lowered | pass | NFR1 
+| TC15 | Movement costs the player fuel | Move the ship | WAD keys | Fuel decreases | Fuel decreases | pass | NFR14 
     
 ## System tests
 
