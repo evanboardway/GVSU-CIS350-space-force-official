@@ -24,31 +24,31 @@ requirement is linked to, or stating "TBD" if no test case has been linked.
 
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
-| FR4 | The game shall randomly generate a series of planets for the player to explore. The game shall save the generated planet system map for the duration of playthrough.| TBD |
-| FR5 | The game shall allow the user to shoot at and damage enemy ships, and the enemy ships shall be able to shoot back and damage the player. | TBD |
-| FR6 | The game shall end once the Earth health reaches 0. | TBD |
+| FR4 | The game shall randomly generate a series of planets for the player to explore. The game shall save the generated planet system map for the duration of playthrough.| TC19 |
+| FR5 | The game shall allow the user to shoot at and damage enemy ships, and the enemy ships shall be able to shoot back and damage the player. | TC11 |
+| FR6 | The game shall end once the Earth health reaches 0. | TC2 |
 | FR7 | The game shall have enemy CPU's defending earth. | TBD |
-| FR8 | The user shall be able to move their ship using keys on a keyboard. | TBD |
+| FR8 | The user shall be able to move their ship using keys on a keyboard. | TC3 |
 
 ### Game economy
 
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
-| FR9 | The game shall have crewmates to hire by spending collected resources.| TBD |
+| FR9 | The game shall have crewmates to hire by spending collected resources.| TC18 |
 | FR10 | Crewmates the player can buy shall scale in power to how much they cost in resources. | TBD |
-| FR11 | In game crewmates shall actively change the stats of the player's ship. | TBD |
+| FR11 | In game crewmates shall actively change the stats of the player's ship. | TC12 |
 | FR12 | Players shall collect resources from planet interactions. | TBD |
-| FR13 | Players will have multiple types of resources to collect from different planets. | TBD |
+| FR13 | Players will have multiple types of resources to collect from different planets. | TC8 |
 
 ### Player Stats
 
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
-| FR14 | The game shall contain an attack stat: a non-negative value that can be decreased and increased.| TBD |
-| FR15 | The game shall contain a fuel stat: a non-negative value that can be decreased and increased up to a maximum value. | TBD |
+| FR14 | The game shall contain an attack stat: a non-negative value that can be decreased and increased.| TC6 |
+| FR15 | The game shall contain a fuel stat: a non-negative value that can be decreased and increased up to a maximum value. | TC4 |
 | FR16 |  The game shall contain a hit point system: a non-negative value that can be decreased or increased up to a maximum value. | TBD |
-| FR17 | The game shall contain a speed stat: a non-negative value that can be decreased or increased up to a maximum value. | TBD |
-| FR18 | The game shall contain an Earth health stat: a non-negative value that can be decreased or increased to a maximum value. | TBD |
+| FR17 | The game shall contain a speed stat: a non-negative value that can be decreased or increased up to a maximum value. | TC7 |
+| FR18 | The game shall contain an Earth health stat: a non-negative value that can be decreased or increased to a maximum value. | TC5 |
 
 
 
@@ -58,9 +58,9 @@ requirement is linked to, or stating "TBD" if no test case has been linked.
 
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
-| NFR1 | The game shall allow the player to attack the earth. | TBD |
-| NFR2 | The game shall allow the player to go to planets as they choose and collect resources. | TBD |
-| NFR3 | The user shall be able to interact with trading posts to expend resources.| TBD |
+| NFR1 | The game shall allow the player to attack the earth. | TC14 |
+| NFR2 | The game shall allow the player to go to planets as they choose and collect resources. | TC17 |
+| NFR3 | The user shall be able to interact with trading posts to expend resources.| TC13 |
 | NFR4 | The game shall be playable in an internet browser.  | TBD |
 | NFR5 | The user shall be able to choose between different crewmates for different effects on their ship. | TBD |
 
@@ -69,9 +69,9 @@ requirement is linked to, or stating "TBD" if no test case has been linked.
 
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
-| NFR6 | The game shall tell the user the controls. | TBD |
-| NFR7 | The trade stations within the game shall have a simple menu to allow the user to easily access what they need. | TBD |
-| NFR8 | The game shall inform the user of the story of the game.| TBD |
+| NFR6 | The game shall tell the user the controls. | TC9 |
+| NFR7 | The trade stations within the game shall have a simple menu to allow the user to easily access what they need. | TC20 |
+| NFR8 | The game shall inform the user of the story of the game.| TC10 |
 | NFR9 | The game shall have a simple interface for traveling between systems.  | TBD |
 | NFR10 | The Earth scene within the game shall have a sound indicator letting the user know when they are approaching Earth. | TBD |
 
@@ -81,8 +81,8 @@ requirement is linked to, or stating "TBD" if no test case has been linked.
 | :-------------: | :----------: | :----------: |
 | NFR11 | Enemy speed in the “Earth” system shall be high enough to offer the player a relative challenge, but not too high as to cause frustration or excessive difficulty. | TBD |
 | NFR12 | The amount of resources available to a player shall be high enough so that the player can purchase crewmates on a consistent basis but not so high that the user is always able to purchase every crewmate they encounter. | TBD |
-| NFR13 | The game shall have automated intelligent enemies in all systems to give the player a relative challenge in beating the game, but not too high as to cause frustration or excessive difficulty.| TBD |
-| NFR14 | In game travel shall cost fuel in order to move forcing players to be strategic about movement choices.  | TBD |
+| NFR13 | The game shall have automated intelligent enemies in all systems to give the player a relative challenge in beating the game, but not too high as to cause frustration or excessive difficulty.| TC16 |
+| NFR14 | In game travel shall cost fuel in order to move forcing players to be strategic about movement choices.  | TC15 |
 | NFR15 | The enemies in the Earth system shall be different from the enemies in normal systems in that they force the player to explore and upgrade their ship before attempting to beat the game. | TBD |
     
 # Test Specification
@@ -121,7 +121,7 @@ This section details the test cases including descriptions, steps to execute, in
 | TC16 | Systems have enemy NPCs that can damage the player | Enter multiple systems and observe enemy behavior | Use left mouse button to navigate the system menu | Enemies spawn, chase the player, and deal damage | Enemies spawn, chase the player, and deal damage | Pass | NFR13 |
 | TC17 | Player can enter planets and collect resources | Enter a system, enter multiple planets, and collect resources | WASD keys and left mouse button | Player enters planet, collects resource, and observes resource increase | Player enters planet, collects resource, and observes resource increase | Pass | NFR2
 | TC18 | Crewmates can be purchase ffrom trade stations | Enter trade station, select crewmates, and purchase crewmate | Left mouse button (to enter trade station, see crewmates, and purchase crewmates) | Crewmate is purchased | Crewmate is purchased | Pass | FR9 
-| TC19 | System's generate random collections of planets | Enter a system, enter another system, return to the previous system, reboot game, enter the first system | WAD keys, left mouse button (to navigate system menu) | System map of first system is the same after returning from second system, system map of first system is changed after rebooting the game | System map of first system is the same after returning from second system, system map of first system is changed after rebooting the game | Pass | FR2
+| TC19 | System's generate random collections of planets | Enter a system, enter another system, return to the previous system, reboot game, enter the first system | WAD keys, left mouse button (to navigate system menu) | System map of first system is the same after returning from second system, system map of first system is changed after rebooting the game | System map of first system is the same after returning from second system, system map of first system is changed after rebooting the game | Pass | FR4
 | TC20 | Trade station menu system works and allows user to trade resources | Enter trade station, navigate menu, trade for resources, fuel, repairs, upgrades, and crewmates | Left mouse button | Menu system allows user to trade for different items, resources and stats are decreased and increased according to trades | Menu system allows user to trade for different items, resources and stats are decreased and increased according to trades | Pass | NFR7 
     
     
