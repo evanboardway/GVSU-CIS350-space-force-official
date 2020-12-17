@@ -27,7 +27,7 @@ requirement is linked to, or stating "TBD" if no test case has been linked.
 | FR4 | The game shall randomly generate a series of planets for the player to explore. The game shall save the generated planet system map for the duration of playthrough.| TC19 |
 | FR5 | The game shall allow the user to shoot at and damage enemy ships, and the enemy ships shall be able to shoot back and damage the player. | TC11 |
 | FR6 | The game shall end once the Earth health reaches 0. | TC2 |
-| FR7 | The game shall have enemy CPU's defending earth. | TBD |
+| FR7 | The game shall have enemy CPU's defending earth. |  |
 | FR8 | The user shall be able to move their ship using keys on a keyboard. | TC3 |
 
 ### Game economy
@@ -35,9 +35,9 @@ requirement is linked to, or stating "TBD" if no test case has been linked.
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
 | FR9 | The game shall have crewmates to hire by spending collected resources.| TC18 |
-| FR10 | Crewmates the player can buy shall scale in power to how much they cost in resources. | TBD |
+| FR10 | Crewmates the player can buy shall scale in power to how much they cost in resources. |  |
 | FR11 | In game crewmates shall actively change the stats of the player's ship. | TC12 |
-| FR12 | Players shall collect resources from planet interactions. | TBD |
+| FR12 | Players shall collect resources from planet interactions. |  |
 | FR13 | Players will have multiple types of resources to collect from different planets. | TC8 |
 
 ### Player Stats
@@ -46,7 +46,7 @@ requirement is linked to, or stating "TBD" if no test case has been linked.
 | :-------------: | :----------: | :----------: |
 | FR14 | The game shall contain an attack stat: a non-negative value that can be decreased and increased.| TC6 |
 | FR15 | The game shall contain a fuel stat: a non-negative value that can be decreased and increased up to a maximum value. | TC4 |
-| FR16 |  The game shall contain a hit point system: a non-negative value that can be decreased or increased up to a maximum value. | TBD |
+| FR16 |  The game shall contain a hit point system: a non-negative value that can be decreased or increased up to a maximum value. |  |
 | FR17 | The game shall contain a speed stat: a non-negative value that can be decreased or increased up to a maximum value. | TC7 |
 | FR18 | The game shall contain an Earth health stat: a non-negative value that can be decreased or increased to a maximum value. | TC5 |
 
@@ -61,8 +61,8 @@ requirement is linked to, or stating "TBD" if no test case has been linked.
 | NFR1 | The game shall allow the player to attack the earth. | TC14 |
 | NFR2 | The game shall allow the player to go to planets as they choose and collect resources. | TC17 |
 | NFR3 | The user shall be able to interact with trading posts to expend resources.| TC13 |
-| NFR4 | The game shall be playable in an internet browser.  | TBD |
-| NFR5 | The user shall be able to choose between different crewmates for different effects on their ship. | TBD |
+| NFR4 | The game shall be playable in an internet browser.  |  |
+| NFR5 | The user shall be able to choose between different crewmates for different effects on their ship. |  |
 
 
 ### Usability
@@ -72,18 +72,18 @@ requirement is linked to, or stating "TBD" if no test case has been linked.
 | NFR6 | The game shall tell the user the controls. | TC9 |
 | NFR7 | The trade stations within the game shall have a simple menu to allow the user to easily access what they need. | TC20 |
 | NFR8 | The game shall inform the user of the story of the game.| TC10 |
-| NFR9 | The game shall have a simple interface for traveling between systems.  | TBD |
-| NFR10 | The Earth scene within the game shall have a sound indicator letting the user know when they are approaching Earth. | TBD |
+| NFR9 | The game shall have a simple interface for traveling between systems.  |  |
+| NFR10 | The Earth scene within the game shall have a sound indicator letting the user know when they are approaching Earth. |  |
 
 ### Difficulty
 
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
-| NFR11 | Enemy speed in the “Earth” system shall be high enough to offer the player a relative challenge, but not too high as to cause frustration or excessive difficulty. | TBD |
-| NFR12 | The amount of resources available to a player shall be high enough so that the player can purchase crewmates on a consistent basis but not so high that the user is always able to purchase every crewmate they encounter. | TBD |
+| NFR11 | Enemy speed in the “Earth” system shall be high enough to offer the player a relative challenge, but not too high as to cause frustration or excessive difficulty. |  |
+| NFR12 | The amount of resources available to a player shall be high enough so that the player can purchase crewmates on a consistent basis but not so high that the user is always able to purchase every crewmate they encounter. |  |
 | NFR13 | The game shall have automated intelligent enemies in all systems to give the player a relative challenge in beating the game, but not too high as to cause frustration or excessive difficulty.| TC16 |
 | NFR14 | In game travel shall cost fuel in order to move forcing players to be strategic about movement choices.  | TC15 |
-| NFR15 | The enemies in the Earth system shall be different from the enemies in normal systems in that they force the player to explore and upgrade their ship before attempting to beat the game. | TBD |
+| NFR15 | The enemies in the Earth system shall be different from the enemies in normal systems in that they force the player to explore and upgrade their ship before attempting to beat the game. |  |
     
 # Test Specification
 
