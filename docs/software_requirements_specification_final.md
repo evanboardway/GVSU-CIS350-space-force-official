@@ -24,31 +24,31 @@ requirement is linked to, or stating "TBD" if no test case has been linked.
 
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
-| FR3 | The game shall randomly generate a series of planets for the player to explore. The game shall save the generated planet system map for the duration of playthrough.| TBD |
-| FR4 | The game shall allow the user to shoot at and damage enemy ships, and the enemy ships shall be able to shoot back and damage the player. | TBD |
-| FR5 | The game shall end once the Earth health reaches 0. | TBD |
-| FR6 | The game shall have enemy CPU's defending earth. | TBD |
-| FR7 | The user shall be able to move their ship using keys on a keyboard. | TBD |
+| FR4 | The game shall randomly generate a series of planets for the player to explore. The game shall save the generated planet system map for the duration of playthrough.| TBD |
+| FR5 | The game shall allow the user to shoot at and damage enemy ships, and the enemy ships shall be able to shoot back and damage the player. | TBD |
+| FR6 | The game shall end once the Earth health reaches 0. | TBD |
+| FR7 | The game shall have enemy CPU's defending earth. | TBD |
+| FR8 | The user shall be able to move their ship using keys on a keyboard. | TBD |
 
 ### Game economy
 
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
-| FR8 | The game shall have crewmates to hire by spending collected resources.| TBD |
-| FR9 | Crewmates the player can buy shall scale in power to how much they cost in resources. | TBD |
-| FR10 | In game crewmates shall actively change the stats of the player's ship. | TBD |
-| FR11 | Players shall collect resources from planet interactions. | TBD |
-| FR12 | Players will have multiple types of resources to collect from different planets. | TBD |
+| FR9 | The game shall have crewmates to hire by spending collected resources.| TBD |
+| FR10 | Crewmates the player can buy shall scale in power to how much they cost in resources. | TBD |
+| FR11 | In game crewmates shall actively change the stats of the player's ship. | TBD |
+| FR12 | Players shall collect resources from planet interactions. | TBD |
+| FR13 | Players will have multiple types of resources to collect from different planets. | TBD |
 
 ### Player Stats
 
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
-| FR13 | The game shall contain an attack stat: a non-negative value that can be decreased and increased.| TBD |
-| FR14 | The game shall contain a fuel stat: a non-negative value that can be decreased and increased up to a maximum value. | TBD |
-| FR15 |  The game shall contain a hit point system: a non-negative value that can be decreased or increased up to a maximum value. | TBD |
-| FR16 | The game shall contain a speed stat: a non-negative value that can be decreased or increased up to a maximum value. | TBD |
-| FR17 | The game shall contain an Earth health stat: a non-negative value that can be decreased or increased to a maximum value. | TBD |
+| FR14 | The game shall contain an attack stat: a non-negative value that can be decreased and increased.| TBD |
+| FR15 | The game shall contain a fuel stat: a non-negative value that can be decreased and increased up to a maximum value. | TBD |
+| FR16 |  The game shall contain a hit point system: a non-negative value that can be decreased or increased up to a maximum value. | TBD |
+| FR17 | The game shall contain a speed stat: a non-negative value that can be decreased or increased up to a maximum value. | TBD |
+| FR18 | The game shall contain an Earth health stat: a non-negative value that can be decreased or increased to a maximum value. | TBD |
 
 
 
