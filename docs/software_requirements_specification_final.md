@@ -18,6 +18,7 @@ requirement is linked to, or stating "TBD" if no test case has been linked.
 | :-------------: | :----------: | :----------: |
 | FR1 | The game shall display an interface menu when pressing the designated menu key. The menu will display player inventory and current objective. | TBD |
 | FR2 | The game shall display the users current health, speed, fuel, and other base stats on the screen in the font we have provided. | TBD |
+| FR3 | The game shall display an error message that provides some information after a player attempts an action that is not allowed. | TBD |
     
 ### Gameplay
 
