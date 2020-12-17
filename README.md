@@ -14,6 +14,9 @@ Our project plan is to create a rouguelike rpg set in an sci-fi environment revo
 * [Ryan Kinahan(waterboy, spiritual guide)](https://github.com/RyanKinahan/CIS350-HW2-Kinahan)
 
 ## Prerequisites
+All you need is to install a web browser.
 
+For example, we recommend Google Chrome: https://support.google.com/chrome/answer/95346?co=GENIE.Platform%3DDesktop&hl=en
+ 
 ## Run Instructions
-https://evanboardway.itch.io/space-pirates
+Navigate to this website: https://evanboardway.itch.io/space-pirates
