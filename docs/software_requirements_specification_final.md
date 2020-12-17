@@ -18,37 +18,36 @@ requirement is linked to, or stating "TBD" if no test case has been linked.
 | :-------------: | :----------: | :----------: |
 | FR1 | The game shall display an interface menu when pressing the designated menu key. The menu will display player inventory and current objective. | TBD |
 | FR2 | The game shall display the users current health, speed, fuel, and other base stats on the screen in the font we have provided. | TBD |
-| FR3 | The game shall display an error message that provides some information after a player attempts an action that is not allowed. | TBD |
     
 ### Gameplay
 
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
-| FR4 | The game shall randomly generate a series of planets for the player to explore. The game shall save the generated planet system map for the duration of playthrough.| TBD |
-| FR5 | The game shall allow the user to shoot at and damage enemy ships, and the enemy ships shall be able to shoot back and damage the player. | TBD |
-| FR6 | The game shall end once the Earth health reaches 0. | TBD |
-| FR7 | The game shall have enemy CPU's defending earth. | TBD |
-| FR8 | The user shall be able to move their ship using keys on a keyboard. | TBD |
+| FR3 | The game shall randomly generate a series of planets for the player to explore. The game shall save the generated planet system map for the duration of playthrough.| TBD |
+| FR4 | The game shall allow the user to shoot at and damage enemy ships, and the enemy ships shall be able to shoot back and damage the player. | TBD |
+| FR5 | The game shall end once the Earth health reaches 0. | TBD |
+| FR6 | The game shall have enemy CPU's defending earth. | TBD |
+| FR7 | The user shall be able to move their ship using keys on a keyboard. | TBD |
 
 ### Game economy
 
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
-| FR9 | The game shall have crewmates to hire by spending collected resources.| TBD |
-| FR10 | Crewmates the player can buy shall scale in power to how much they cost in resources. | TBD |
-| FR11 | In game crewmates shall actively change the stats of the player's ship. | TBD |
-| FR12 | Players shall collect resources from planet interactions. | TBD |
-| FR13 | Players will have multiple types of resources to collect from different planets. | TBD |
+| FR8 | The game shall have crewmates to hire by spending collected resources.| TBD |
+| FR9 | Crewmates the player can buy shall scale in power to how much they cost in resources. | TBD |
+| FR10 | In game crewmates shall actively change the stats of the player's ship. | TBD |
+| FR11 | Players shall collect resources from planet interactions. | TBD |
+| FR12 | Players will have multiple types of resources to collect from different planets. | TBD |
 
 ### Player Stats
 
 | ID | Requirement | Test Cases |
 | :-------------: | :----------: | :----------: |
-| FR14 | The game shall contain an attack stat: a non-negative value that can be decreased and increased.| TBD |
-| FR15 | The game shall contain a fuel stat: a non-negative value that can be decreased and increased up to a maximum value. | TBD |
-| FR16 |  The game shall contain a hit point system: a non-negative value that can be decreased or increased up to a maximum value. | TBD |
-| FR17 | The game shall contain a speed stat: a non-negative value that can be decreased or increased up to a maximum value. | TBD |
-| FR18 | The game shall contain an Earth health stat: a non-negative value that can be decreased or increased to a maximum value. | TBD |
+| FR13 | The game shall contain an attack stat: a non-negative value that can be decreased and increased.| TBD |
+| FR14 | The game shall contain a fuel stat: a non-negative value that can be decreased and increased up to a maximum value. | TBD |
+| FR15 |  The game shall contain a hit point system: a non-negative value that can be decreased or increased up to a maximum value. | TBD |
+| FR16 | The game shall contain a speed stat: a non-negative value that can be decreased or increased up to a maximum value. | TBD |
+| FR17 | The game shall contain an Earth health stat: a non-negative value that can be decreased or increased to a maximum value. | TBD |
 
 
 
@@ -93,14 +92,14 @@ This section details the test cases including descriptions, steps to execute, in
 
 | ID | Description | Steps | Input Values | Expected Output | Actual Output| Pass/Fail | Requirement Link |
 | :-------------: | :----------: | :----------: | :----------: | :----------:| :----------: | :----------: | :----------: |
-| TC1 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> |
-| TC2 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> 
-| TC3 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> 
-| TC4 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> 
-| TC5 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> 
-| TC6 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> 
-| TC7 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> 
-| TC8 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> 
+| TC1 | Error Message variable is set upon calling _set_error_message() | Enter a planet, leave a planet, then try to enter the planet again. | _set_error_message("you cannot enter this planet for #{minutes} minutes") | "you cannot enter this planet for 3 minutes" | "you cannot enter this planet for 3 minutes" | Pass | FR3 |
+| TC2 | Game ends once earth health reaches zero | Set the earth's initial health to zero | earthHealth = 0 | function call to end game screen | function call to end game screen | Pass | FR6 
+| TC3 | Pressing a key matches an if statement in the Player class | Press the w key upon loading the game | W key press | Player moves forward | Player moves forward | pass | FR8
+| TC4 | Fuel is initialized to 10,000 | Start the game | N/A | fuel variable is set to 10,000 | Fuel was set to 10,000 | Pass | FR15 
+| TC5 | Earth Health is initialized to 10,000 | Start the game | N/A | Earth Health variable is set to 10,000 | Earth Health was set to 10,000 | Pass | FR18 
+| TC6 | Attack is initialized to 10 | Start the game | N/A | Attack variable is set to 10 | Attack was set to 10 | Pass | FR14 
+| TC7 | Speed is initialized to 300 | Start the game | N/A | Speed variable is set to 300 | Speed was set to 300 | Pass | FR17
+| TC8 | Planet creates a random number of resources (Iron, Silver, Gold) upon initialization | Run the game | N/A | Planet resource variables are set | Planet resources are set | Pass | FR13 
 | TC9 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> 
 | TC10 | <TC1 description> | <steps to execute TC1> | <input values to this test case> | <expected output as a result of test case> | <actual output of test case> | <did it pass or fail?> | <requirement IDs this test case is linked to> 
     
