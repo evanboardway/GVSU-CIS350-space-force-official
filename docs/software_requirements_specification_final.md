@@ -73,7 +73,7 @@ requirement is linked to, or stating "TBD" if no test case has been linked.
 | NFR7 | The trade stations within the game shall have a simple menu to allow the user to easily access what they need. | TC20 |
 | NFR8 | The game shall inform the user of the story of the game.| TC10 |
 | NFR9 | The game shall have a simple interface for traveling between systems.  | TBD |
-| NFR10 | The Earth scene within the game shall have a sound indicator letting the user know when they are approaching Earth. |  |
+| NFR10 | The Earth scene within the game shall have a sound indicator letting the user know when they are approaching Earth. | TBD |
 
 ### Difficulty
 
